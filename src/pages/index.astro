@@ -1,7 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Button from '../components/button.astro'
+import Wrapper from '../components/wrapper.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-  <button class="bg-primary px-6 py-2 rounded-full text-sm">Agregar</button>
-</Layout>
+<DefaultLayout title="Welcome to Astro.">
+  <Wrapper>
+    <Button variant="ghost">Hello</Button>
+  </Wrapper>
+</DefaultLayout>

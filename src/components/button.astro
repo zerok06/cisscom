@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+/* TIPADO */
+interface ButtonProps extends HTMLAttributes<'button'> {
+  variant?: 'normal' | 'outline' | 'ghost'
+}
+
+const props: ButtonProps = Astro.props
+
+let stylesDefault = 'px-6 py-2 rounded-full bg-primary'
+const styles = {
+  normal: 'px-6 py-2 rounded-full bg-primary',
+  outline: 'px-6 py-2 rounded-full border border-[var(--primary)] text-primary',
+  ghost: 'px-6 py-2 text-gray-400',
+}
+if (props.variant) {
+  stylesDefault = styles[props.variant]
+}
+---
+
+<button {...props} class={stylesDefault}>
+  <slot />
+</button>
