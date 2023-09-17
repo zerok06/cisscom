@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --primary: 175 45% 58%;
+}
+
+.text-primary {
+    color: hsl(var(--primary));
+}
+
+.bg-primary {
+    background-color: hsl(var(--primary));
+}
+
+@layer {}
