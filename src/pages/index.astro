@@ -1,11 +1,14 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Button from '../components/button.astro'
-import Wrapper from '../components/wrapper.astro'
+import Hero from '../components/Hero/hero-section.astro'
+import Agenda from '../components/Agenda/agenda-section.astro'
 ---
 
-<DefaultLayout title="Welcome to Astro.">
-  <Wrapper>
-    <Button variant="ghost">Hello</Button>
-  </Wrapper>
+<DefaultLayout title="VI CISSCOM">
+  <header>
+    <Hero />
+  </header>
+  <main>
+    <Agenda />
+  </main>
 </DefaultLayout>

@@ -1,0 +1,80 @@
+---
+import Wrapper from '../wrapper.astro'
+
+const AGENDA = [
+  {
+    hour: '8:00 am (PET)',
+    ubi: 'Sala 1',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Cristian Martinez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  {
+    hour: '8:00 am (PET)',
+    ubi: 'Sala 1',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Cristian Martinez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  {
+    hour: '8:00 am (PET)',
+    ubi: 'Sala 1',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Cristian Martinez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+]
+---
+
+<section>
+  <Wrapper>
+    <h2 class="text-black text-3xl font-semibold text-center">
+      Agenda del Evento
+    </h2>
+    <p class="text-black/70 text-center mx-auto lg:w-[60%]">
+      El congreso se realizará según los temas fijados, estos serán realizados
+      únicamente el lunes 28 y el martes 29 de Noviembre del 2022.
+    </p>
+    <div class="flex flex-col gap-4">
+      {
+        AGENDA.map(item => (
+          <div class="grid grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-6 px-8">
+            <div>
+              <h5 class="text-[hsl(var(--primary))] text-lg font-semibold">
+                {item.hour}
+              </h5>
+              <p class="text-black/70 text-sm">{item.ubi}</p>
+            </div>
+            <div class="flex col-span-2 items-center gap-4 border-l pl-4 border-gray-200">
+              <img
+                src={item.speaker.avatar}
+                class="h-16 w-16 rounded-full"
+                alt=""
+              />
+              <div>
+                <h5 class="text-black font-semibold">{item.speaker.name}</h5>
+                <p class="text-black/70 text-xs">{item.speaker.job}</p>
+              </div>
+            </div>
+            <div class="col-span-3 border-l  pl-4 border-gray-200">
+              <h4 class="text-lg text-black font-semibold">{item.title}</h4>
+              <p class="text-black/70 text-xs">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Wrapper>
+</section>

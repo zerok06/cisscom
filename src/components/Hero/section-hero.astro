@@ -1,0 +1,20 @@
+---
+import Button from '../button.astro'
+---
+
+<section class="h-[calc(90vh-108px)] flex justify-start items-center">
+  <div class="flex flex-col gap-6 lg:max-w-[60%]">
+    <h4 class="text-[hsl(var(--primary))] text-xl font-semibold">Evento</h4>
+    <h1 class="text-white font-bold text-6xl">
+      VI Congreso Internacional de Sistemas y Ciencia de la Computación
+    </h1>
+    <div>
+      <p class="text-white/80">17 de septiembre de 2023 (GMT-5)</p>
+      <p class="text-white/80">9:00 AM - 17:30 PM</p>
+    </div>
+    <div class="flex gap-5">
+      <Button>Registrame ahora</Button>
+      <Button variant="outline">Guardar evento</Button>
+    </div>
+  </div>
+</section>

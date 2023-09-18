@@ -8,10 +8,11 @@ interface ButtonProps extends HTMLAttributes<'button'> {
 
 const props: ButtonProps = Astro.props
 
-let stylesDefault = 'px-6 py-2 rounded-full bg-primary'
+let stylesDefault =
+  'px-6 py-2 text-sm font-medium hover:opacity-95 transition-opacity rounded-full bg-primary'
 const styles = {
   normal: 'px-6 py-2 rounded-full bg-primary',
-  outline: 'px-6 py-2 rounded-full border border-[var(--primary)] text-primary',
+  outline: 'px-6 py-2 rounded-full border-[2px] border-gray-400 text-white/80',
   ghost: 'px-6 py-2 text-gray-400',
 }
 if (props.variant) {
