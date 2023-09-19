@@ -36,17 +36,68 @@ const AGENDA = [
     },
   },
 ]
+const DAYS = [
+  {
+    day: '14 Feb.',
+    fecha: '14-09-23',
+    active: true,
+  },
+  {
+    day: '14 Feb.',
+    fecha: '14-09-23',
+    active: false,
+  },
+  {
+    day: '14 Feb.',
+    fecha: '14-09-23',
+    active: false,
+  },
+]
 ---
 
 <section class="py-8">
   <Wrapper>
-    <h2 class="text-black text-3xl font-semibold mb-2 text-center">
-      Agenda del Evento
-    </h2>
-    <p class="text-black/70 text-center mx-auto mb-2 lg:w-[60%]">
-      El congreso se realizará según los temas fijados, estos serán realizados
-      únicamente el lunes 28 y el martes 29 de Noviembre del 2022.
+    <h2 class="text-black text-4xl font-bold text-center">Agenda del Evento</h2>
+    <p class="text-black/70 text-center mx-auto my-4 lg:w-[60%]">
+      El congreso se realizará según los temas fijados.
     </p>
+
+    <div class="flex flex-row justify-center gap-4 my-8">
+      {
+        DAYS.map(item => (
+          <div
+            class={`relative h-32 w-32 flex flex-col justify-center items-center text-center rounded-full border-[3px] border-[hsl(var(--primary))] ${
+              item.active && 'bg-[hsl(var(--primary))]'
+            }`}
+          >
+            {item.active && (
+              <span>
+                <svg
+                  class="h-6 w-6 absolute top-0 bg-[hsl(var(--primary))] text-white border-[3px] rounded-full p-1 border-white left-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                </svg>
+              </span>
+            )}
+            <h2
+              class={`font-semibold text-lg ${
+                item.active ? ' text-white' : ' text-black'
+              }`}
+            >
+              {item.day}
+            </h2>
+            <p class={`text-sm ${item.active ? ' text-white' : ' text-black'}`}>
+              {item.fecha}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
     <div class="flex flex-col gap-4">
       {
         AGENDA.map(item => (

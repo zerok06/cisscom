@@ -1,0 +1,24 @@
+---
+import { Code } from 'astro:components'
+import Wrapper from '../wrapper.astro'
+import Speaker from './speaker.astro'
+
+const SPEAKERS = [
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
+]
+---
+
+<section>
+  <Wrapper>
+    <h5>asdasd</h5>
+    <h2>asdasd</h2>
+
+    <div class="grid grid-cols-4">
+      {SPEAKERS.map(speak => <Speaker {...speak} />)}
+    </div>
+  </Wrapper>
+</section>
