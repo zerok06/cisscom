@@ -9,15 +9,44 @@ const SPEAKERS = [
     description: 'UX Engineer Freelance',
     avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
   },
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
+  {
+    name: 'Carmen Ansio',
+    description: 'UX Engineer Freelance',
+    avatar: 'https://www.miduconf.com/img/speakers/carmen.jpg',
+  },
 ]
 ---
 
 <section>
   <Wrapper>
-    <h5>asdasd</h5>
-    <h2>asdasd</h2>
+    <h2 class="text-4xl font-bold text-center">Speakers</h2>
+    <h5 class="text-center text-black/80 my-6">
+      Divulgadores y profesionales de la comunidad
+    </h5>
 
-    <div class="grid grid-cols-4">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-4"
+    >
       {SPEAKERS.map(speak => <Speaker {...speak} />)}
     </div>
   </Wrapper>
