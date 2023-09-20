@@ -1,0 +1,17 @@
+---
+const { name, description, avatar } = Astro.props
+---
+
+<div class="group">
+  <div
+    class="rounded-full overflow-hidden relative group w-[200px] mx-auto cursor-pointer"
+  >
+    <img src={avatar} class="rounded-full w-[200px] mx-auto" alt="asd" />
+  </div>
+  <h2
+    class="text-center text-xl font-semibold group-hover:underline cursor-pointer"
+  >
+    {name}
+  </h2>
+  <p class="text-center text-black/80">{description}</p>
+</div>

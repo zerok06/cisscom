@@ -6,6 +6,7 @@
 
 :root {
     --primary: 175 45% 58%;
+    --secondary: 223 35% 31%;
 }
 
 .text-primary {
@@ -17,3 +18,25 @@
 }
 
 @layer {}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: hsl(var(--primary));
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: black;
+    background: hsl(var(--primary) / 70%);
+}
+
+::selection {
+    color: black;
+    background: hsl(var(--primary) / 70%);
+
+}
