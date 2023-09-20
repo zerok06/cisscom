@@ -32,11 +32,11 @@
 ::-moz-selection {
     /* Code for Firefox */
     color: black;
-    background: hsl(var(--primary) / 70%);
+    background: hsl(var(--primary) / 50%);
 }
 
 ::selection {
     color: black;
-    background: hsl(var(--primary) / 70%);
+    background: hsl(var(--primary) / 50%);
 
 }
