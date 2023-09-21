@@ -18,7 +18,11 @@ const { name, description, avatar } = Astro.props
         ></path></svg
       >
     </span>
-    <img src={avatar} class="rounded-full w-[200px] mx-auto" alt="asd" />
+    <img
+      src={avatar}
+      class="rounded-full w-[200px] h-[200px] object-cover object-top mx-auto"
+      alt="asd"
+    />
   </div>
   <h2
     class="text-center text-xl font-semibold group-hover:underline cursor-pointer"

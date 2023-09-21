@@ -10,16 +10,18 @@ const menu = [
     name: 'Agenda',
   },
   {
-    href: '#',
+    href: '#partners',
     name: 'Sponsors',
   },
 ]
 ---
 
 <div class="pt-2">
-  <div class="flex justify-between items-center flex-nowrap h-14">
+  <div
+    class="flex justify-center md:justify-between items-center flex-nowrap h-14"
+  >
     <div class="flex gap-8 items-center">
-      <a href="#" class="text-white/90 flex gap-2 items-center">
+      <a href="#" class="hidden md:flex text-white/90 gap-2 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height=".9em"
@@ -32,7 +34,7 @@ const menu = [
         >
         <span class="text-white/70 text-sm">+51 923 923 239</span>
       </a>
-      <a href="#" class="text-white/90 flex gap-2 items-center">
+      <a href="#" class="hidden md:flex text-white/90 gap-2 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height=".9em"
@@ -97,7 +99,7 @@ const menu = [
       </a>
     </ul>
   </div>
-  <nav class="min-h-20 flex justify-between items-center flex-row">
+  <nav class="min-h-20 flex justify-between md:flex-row items-center flex-col">
     <a href="#" class="text-white text-xl font-semibold"> CISSCOM</a>
     <ul class="flex gap-4">
       {
@@ -112,6 +114,10 @@ const menu = [
         ))
       }
     </ul>
-    <Button>Registro</Button>
+    <a
+      href="#"
+      class="px-6 hidden md:block py-2 text-sm font-medium hover:opacity-95 transition-opacity rounded-full bg-primary"
+      >Registro</a
+    >
   </nav>
 </div>
