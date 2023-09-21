@@ -8,16 +8,16 @@ import Wrapper from '../wrapper.astro'
 >
   <Wrapper>
     <div
-      class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-8 py-8 justify-items-center items-center"
+      class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-8 py-8 justify-items-center items-center"
     >
       <div>
         <img
-          class="rounded-3xl w-full"
+          class="rounded-3xl w-[350px]"
           src="https://www.linksolution.com.ar/wp-content/uploads/2022/03/callcenter-tipos.jpg"
           alt="orientador"
         />
       </div>
-      <div>
+      <div class="flex flex-col items-start gap-2">
         <h4 class="text-lg font-semibold text-[hsl(var(--primary))]">
           Ponte en contacto con
         </h4>
@@ -26,8 +26,6 @@ import Wrapper from '../wrapper.astro'
           Te brindaran mas inforamcion sobre el evento como algunos detalles
           mas.
         </p>
-      </div>
-      <div>
         <Button>Recibir orientacion</Button>
       </div>
     </div>

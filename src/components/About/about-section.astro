@@ -1,0 +1,105 @@
+---
+import Button from '../button.astro'
+import Wrapper from '../wrapper.astro'
+---
+
+<section class="py-20">
+  <Wrapper>
+    <div
+      class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-8 items-center"
+    >
+      <div class="flex flex-col lg:items-start lg:justify-center gap-2">
+        <h3
+          class="text-center lg:text-start text-xl font-medium text-[hsl(var(--primary))]"
+        >
+          Acerca del Evento
+        </h3>
+        <h2 class="text-4xl text-center lg:text-start lg:text-5xl font-bold">
+          VI CISCCOM
+        </h2>
+        <p class="text-center lg:text-start text-black/70 w-full lg:w-[80%]">
+          En este evento “V Congreso Internacional de Sistemas y Ciencia de la
+          Computación – CISCCOM” se expondrán las actuales tendencias de
+          Inteligencia Artificial, Visión por Computadora, Procesamiento de
+          Imagenes, con el fin de fortalecer los conocimientos y evaluar los
+          avances en estas tendencias.
+        </p>
+        <div
+          class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-3 w-full lg:w-[80%]"
+        >
+          <div
+            class="py-4 px-6 flex items-center gap-4 flex-row bg-[hsl(var(--primary))]/10 text-black/50 rounded-xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3em"
+              fill="currentColor"
+              viewBox="0 0 640 512"
+            >
+              <path
+                d="M200.6 32C205 19.5 198.5 5.8 186 1.4S159.8 3.5 155.4 16L144.7 46.2l-9.9-29.8C130.6 3.8 117-3 104.4 1.2S85 19 89.2 31.6l8.3 25-27.4-20c-10.7-7.8-25.7-5.4-33.5 5.3s-5.4 25.7 5.3 33.5L70.2 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H200.6c-5.4-9.4-8.6-20.3-8.6-32V256c0-29.9 20.5-55 48.2-62c1.8-31 17.1-58.2 40.1-76.1C271.7 104.7 256.9 96 240 96H217.8l28.3-20.6c10.7-7.8 13.1-22.8 5.3-33.5s-22.8-13.1-33.5-5.3L192.5 55.1 200.6 32zM363.5 185.5L393.1 224H344c-13.3 0-24-10.7-24-24c0-13.1 10.8-24 24.2-24c7.6 0 14.7 3.5 19.3 9.5zM272 200c0 8.4 1.4 16.5 4.1 24H272c-26.5 0-48 21.5-48 48v80H416V256h32v96H640V272c0-26.5-21.5-48-48-48h-4.1c2.7-7.5 4.1-15.6 4.1-24c0-39.9-32.5-72-72.2-72c-22.4 0-43.6 10.4-57.3 28.2L432 195.8l-30.5-39.6c-13.7-17.8-35-28.2-57.3-28.2c-39.7 0-72.2 32.1-72.2 72zM224 464c0 26.5 21.5 48 48 48H416V384H224v80zm224 48H592c26.5 0 48-21.5 48-48V384H448V512zm96-312c0 13.3-10.7 24-24 24H470.9l29.6-38.5c4.6-5.9 11.7-9.5 19.3-9.5c13.4 0 24.2 10.9 24.2 24z"
+              ></path>
+            </svg>
+            <div>
+              <h3 class="text-lg font-semibold">12+ Sopresas</h3>
+              <p class="text-sm">Valido para todos los participantes</p>
+            </div>
+          </div>
+          <div
+            class="py-4 px-6 flex items-center gap-4 flex-row bg-[hsl(var(--primary))]/10 text-black/50 rounded-xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3em"
+              fill="currentColor"
+              viewBox="0 0 640 512"
+            >
+              <path
+                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"
+              ></path>
+            </svg>
+            <div>
+              <h3 class="text-lg font-semibold">Certificado</h3>
+              <p class="text-sm">Solo valido por el 80% de asistencias</p>
+            </div>
+          </div>
+        </div>
+        <Button>Registrarse!</Button>
+      </div>
+      <div>
+        <div class="grid lg:grid-cols-4 lg:grid-rows-4 min-h-[500px] gap-6">
+          <div
+            class="col-span-4 row-span-2 bg-gray-300 rounded-2xl relative overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1494869042583-f6c911f04b4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt=""
+              class="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="rounded-2xl bg-[hsl(var(--secondary))]/80 flex justify-center items-center flex-col"
+          >
+            <h3 class="text-4xl text-white font-semibold">35+</h3>
+            <p class="text-base text-white/80">Sponnsors</p>
+          </div>
+          <div
+            class="col-span-3 row-span-2 bg-gray-300 rounded-2xl relative overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1665690399857-9de8bbbeb108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+              alt=""
+              class="absolute top-0 left-0 h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="rounded-2xl bg-[hsl(var(--primary))]/60 flex justify-center items-center flex-col"
+          >
+            <h3 class="text-4xl text-black font-semibold">7+</h3>
+            <p class="text-base text-black/80">Speakers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</section>

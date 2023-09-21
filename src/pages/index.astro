@@ -6,7 +6,6 @@ import Speakers from '../components/Speakers/speak-section.astro'
 import Maps from '../components/Maps/map-section.astro'
 import CTA from '../components/CTA/cta-section.astro'
 import Footer from '../components/footer.astro'
-import Partners from '../components/Partners/partner-section.astro' 
 ---
 
 <DefaultLayout title="VI CISSCOM">
@@ -14,7 +13,6 @@ import Partners from '../components/Partners/partner-section.astro'
     <Hero />
   </header>
   <main>
-    <Partners />
     <Agenda />
     <CTA />
     <Speakers />
@@ -22,3 +20,24 @@ import Partners from '../components/Partners/partner-section.astro'
   </main>
   <Footer />
 </DefaultLayout>
+<!-- <script>
+  const callback = function (entries) {
+    entries.forEach(entry => {
+      console.log(entry)
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fadeIn')
+      } else {
+        entry.target.classList.remove('animate-fadeIn')
+      }
+    })
+  }
+
+  const observer = new IntersectionObserver(callback)
+
+  const targets = document.querySelectorAll('.js-show-on-scroll')
+  targets.forEach(function (target) {
+    target.classList.add('opacity-0')
+    observer.observe(target)
+  })
+</script> -->

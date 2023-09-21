@@ -1,0 +1,28 @@
+---
+const { index, hour, speaker, title, description, ubi } = Astro.props
+---
+
+<div
+  class="grid md:grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-5 px-8"
+>
+  <div>
+    <h4 class="font-bold">Ponencia {index + 1}</h4>
+    <h5 class="text-[hsl(var(--primary))] text-lg font-semibold">
+      {hour}
+    </h5>
+    <p class="text-black/70 text-sm">{ubi}</p>
+  </div>
+  <div class="flex col-span-2 items-center gap-4 border-l pl-4 border-gray-200">
+    <img src={speaker.avatar} class="h-16 w-16 rounded-full" alt="" />
+    <div>
+      <h5 class="text-black font-semibold">{speaker.name}</h5>
+      <p class="text-black/70 text-xs">{speaker.job}</p>
+    </div>
+  </div>
+  <div class="col-span-3 md:border-l pl-4 border-gray-200">
+    <h4 class="text-lg text-center md:text-start text-black font-semibold">
+      {title}
+    </h4>
+    <p class="text-center md:text-start text-black/70 text-xs">{description}</p>
+  </div>
+</div>
