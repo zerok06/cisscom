@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary: 175 45% 58%;
@@ -16,6 +18,22 @@
 .bg-primary {
     background-color: hsl(var(--primary));
 }
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
 
 @layer {}
 
@@ -32,11 +50,11 @@
 ::-moz-selection {
     /* Code for Firefox */
     color: black;
-    background: hsl(var(--primary) / 70%);
+    background: hsl(var(--primary) / 50%);
 }
 
 ::selection {
     color: black;
-    background: hsl(var(--primary) / 70%);
+    background: hsl(var(--primary) / 50%);
 
 }
