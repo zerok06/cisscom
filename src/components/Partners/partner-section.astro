@@ -1,0 +1,54 @@
+---
+import Wrapper from '../wrapper.astro'
+const team = [
+  {
+    name: 'UNAM',
+    image: '/assets/logo-u.png',
+    job: 'Partner',
+  },
+
+  {
+    name: 'AI-MARA',
+    image: '/assets/logo-u.png',
+    job: 'Partner',
+  },
+
+  {
+    name: 'Sponsor1',
+    image: '/assets/logo-u.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'Sponsor2',
+    image: '/assets/logo-u.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'Sponsor3',
+    image: '/assets/logo-u.png',
+    job: 'Sponsor',
+  },
+];
+---
+
+<section class="py-12">
+    <Wrapper>
+<h3 class="text-2xl font-bold text-primary">Patrocinado por</h2>
+<h2 class="text-4xl font-bold text-left mt-3">Nuestros Partners y Sponsors</h2>
+<div class="items-center gap-2 bg-gray-100 rounded-xl py-6 px-8 mt-8">
+    <div class="mx-auto w-full max-w-4xl bg-white dark:bg-transparent mt-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            {
+                team.map((item) => (
+                    <div class="flex flex-col items-center space-y-3">
+                        <img class="mx-auto h-auto w-13 rounded-full" src={item.image} alt={item.name} />
+                        <h3 class="text-lg font-medium">{item.name}</h3>
+                        <p class="text-primary-950/70 dark:text-primary-200/70 text-base">{item.job}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+</Wrapper>
+</section>
