@@ -2,11 +2,11 @@
 import Button from '../../components/button.astro'
 const menu = [
   {
-    href: '#',
+    href: '#speakers',
     name: 'Speakers',
   },
   {
-    href: '#',
+    href: '#agenda',
     name: 'Agenda',
   },
   {
@@ -103,7 +103,7 @@ const menu = [
       {
         menu.map(item => (
           <a
-            href="#"
+            href={item.href}
             class="text-white/80 relative px-2 py-1 hover:text-[hsl(var(--primary))] transition duration-300 
             before:content-normal before:h-[2px] before:w-0 before:rounded-full before:transition-all before:duration-300 before:hover:w-[60%] before:bg-[hsl(var(--primary))] before:absolute before:bottom-0"
           >

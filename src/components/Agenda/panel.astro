@@ -1,0 +1,40 @@
+---
+const { index, hour, speakers, title, description, ubi } = Astro.props
+---
+
+<div
+  class="grid grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-5 px-8"
+>
+  <div>
+    <h4 class="font-bold">Panel</h4>
+    <h5 class="text-[hsl(var(--primary))] text-lg font-semibold">
+      {hour}
+    </h5>
+    <p class="text-black/70 text-sm">{ubi}</p>
+  </div>
+  <div class="col-span-2 border-l relative pl-8 border-gray-200">
+    {
+      speakers.map(speaker => (
+        <img
+          src={speaker.avatar}
+          class={`h-16 inline-block  w-16 rounded-full relative speaker`}
+          alt=""
+        />
+      ))
+    }
+
+    <!-- <div>
+      <h5 class="text-black font-semibold">{speaker.name}</h5>
+      <p class="text-black/70 text-xs">{speaker.job}</p>
+    </div> -->
+  </div>
+  <div class="col-span-3 border-l pl-4 border-gray-200">
+    <h4 class="text-lg text-black font-semibold">{title}</h4>
+    <p class="text-black/70 text-xs">{description}</p>
+  </div>
+</div>
+<style is:inline>
+  .speaker:nth-child(n + 2) {
+    margin-left: -25px;
+  }
+</style>

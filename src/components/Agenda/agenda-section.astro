@@ -1,10 +1,14 @@
 ---
+import type { Code, Debug } from 'astro:components'
 import Wrapper from '../wrapper.astro'
+import Notponencia from './notponencia.astro'
+import Ponencia from './ponencia.astro'
+import Panel from './panel.astro'
 
-const AGENDA = [
+const AGENDA1 = [
   {
-    hour: '8:00 am (PET)',
-    ubi: 'Sala 1',
+    hour: '14:00 pm (PET)',
+    ubi: 'Auditorio EPISI',
     title: 'Visualización de datos en Python.',
     description: 'Visualización de datos en Python.',
     speaker: {
@@ -13,9 +17,10 @@ const AGENDA = [
       job: 'Científico de Datos y Docente-Investigador',
     },
   },
+  { notPont: true, hour: '14:30 pm (PET)', title: 'Preguntas' },
   {
-    hour: '8:00 am (PET)',
-    ubi: 'Sala 1',
+    hour: '14:40 pm (PET)',
+    ubi: 'Auditorio EPISI',
     title: 'Visualización de datos en Python.',
     description: 'Visualización de datos en Python.',
     speaker: {
@@ -24,9 +29,36 @@ const AGENDA = [
       job: 'Científico de Datos y Docente-Investigador',
     },
   },
+  { notPont: true, hour: '15:10 pm (PET)', title: 'Preguntas' },
   {
-    hour: '8:00 am (PET)',
-    ubi: 'Sala 1',
+    isPanel: true,
+    hour: '18:00 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Hub de talento en tecnología en el Perú y el mundo',
+    description: 'Honorio Apaza (Moderador)',
+    speakers: [
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+    ],
+  },
+  { notPont: true, hour: '15:50 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '16:00 pm (PET)', title: 'Break' },
+  {
+    hour: '16:20 pm (PET)',
+    ubi: 'Auditorio EPISI',
     title: 'Visualización de datos en Python.',
     description: 'Visualización de datos en Python.',
     speaker: {
@@ -35,27 +67,136 @@ const AGENDA = [
       job: 'Científico de Datos y Docente-Investigador',
     },
   },
+  { notPont: true, hour: '17:50 pm (PET)', title: 'Preguntas' },
+  {
+    hour: '18:00 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Cristian Martinez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  { notPont: true, hour: '18:30 pm (PET)', title: 'Preguntas' },
+  {
+    isPanel: true,
+    hour: '18:40 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Qué profesionales necesita Perú para la transformación digital',
+    description: 'Honorio Apaza (Moderador)',
+    speakers: [
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+    ],
+  },
+]
+const AGENDA2 = [
+  {
+    hour: '09:00 am (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Manuel Loaiza Fernandez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  { notPont: true, hour: '09:30 am (PET)', title: 'Preguntas' },
+  {
+    hour: '09:40 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Yessenia Yari Ramos',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  { notPont: true, hour: '10:10 pm (PET)', title: 'Preguntas' },
+  {
+    isPanel: true,
+    hour: '10:20 am (PET)',
+    ubi: 'Auditorio EPISI',
+    title:
+      'Empoderamiento Femenino en la Era Digital: Mujeres en la Computación',
+    description: 'Honorio Apaza (Moderador)',
+    speakers: [
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+      {
+        avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+        name: 'Cristian Martinez',
+        job: 'Científico de Datos y Docente-Investigador',
+      },
+    ],
+  },
+  { notPont: true, hour: '10:50 am (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '11:00 am (PET)', title: 'Break' },
+  {
+    hour: '11:20 am (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Visualización de datos en Python. (VIRTUAL)',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Omar Florez',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  { notPont: true, hour: '11:50 am (PET)', title: 'Preguntas' },
+  {
+    hour: '12:00 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Visualización de datos en Python.',
+    description: 'Visualización de datos en Python.',
+    speaker: {
+      avatar: 'https://unam.edu.pe/cisccom/img/cristian.png',
+      name: 'Arturo Deza',
+      job: 'Científico de Datos y Docente-Investigador',
+    },
+  },
+  { notPont: true, hour: '12:30 pm (PET)', title: 'Preguntas' },
 ]
 const DAYS = [
   {
-    day: '14 Feb.',
-    fecha: '14-09-23',
+    day: '30 Nov.',
+    fecha: '30-11-23',
     active: true,
   },
   {
-    day: '14 Feb.',
-    fecha: '14-09-23',
-    active: false,
-  },
-  {
-    day: '14 Feb.',
-    fecha: '14-09-23',
+    day: '01 Dic.',
+    fecha: '01-12-23',
     active: false,
   },
 ]
 ---
 
-<section class="py-20">
+<section id="agenda" class="py-20">
   <Wrapper>
     <h2 class="text-black text-4xl font-bold text-center">Agenda del Evento</h2>
     <p class="text-black/70 text-center mx-auto my-4 lg:w-[60%]">
@@ -65,67 +206,71 @@ const DAYS = [
     <div class="flex flex-row justify-center gap-4 my-8">
       {
         DAYS.map(item => (
-          <div
-            class={`relative h-32 w-32 flex flex-col justify-center items-center text-center rounded-full border-[3px] border-[hsl(var(--primary))] ${
-              item.active && 'bg-[hsl(var(--primary))]'
-            }`}
-          >
-            {item.active && (
-              <span>
-                <svg
-                  class="h-6 w-6 absolute top-0 bg-[hsl(var(--primary))] text-white border-[3px] rounded-full p-1 border-white left-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  fill="currentColor"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
-              </span>
-            )}
-            <h2
-              class={`font-semibold text-lg ${
-                item.active ? ' text-white' : ' text-black'
+          <a href={`#${item.fecha}`}>
+            <div
+              class={`relative h-32 w-32 flex flex-col justify-center items-center text-center rounded-full border-[3px] border-[hsl(var(--primary))] ${
+                item.active && 'bg-[hsl(var(--primary))]'
               }`}
             >
-              {item.day}
-            </h2>
-            <p class={`text-sm ${item.active ? ' text-white' : ' text-black'}`}>
-              {item.fecha}
-            </p>
-          </div>
+              {item.active && (
+                <span>
+                  <svg
+                    class="h-6 w-6 absolute top-0 bg-[hsl(var(--primary))] text-white border-[3px] rounded-full p-1 border-white left-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>
+                </span>
+              )}
+              <h2
+                class={`font-semibold text-lg ${
+                  item.active ? ' text-white' : ' text-black'
+                }`}
+              >
+                {item.day}
+              </h2>
+              <p
+                class={`text-sm ${item.active ? ' text-white' : ' text-black'}`}
+              >
+                {item.fecha}
+              </p>
+            </div>
+          </a>
         ))
       }
     </div>
 
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-3">
+      <h2 id="30-11-23" class="mt-8 text-2xl text-center font-bold">Agenda</h2>
+      <p class="mb-6 text-center text-black/70">30 de noviembre del 2023</p>
       {
-        AGENDA.map(item => (
-          <div class="grid grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-6 px-8">
-            <div>
-              <h5 class="text-[hsl(var(--primary))] text-lg font-semibold">
-                {item.hour}
-              </h5>
-              <p class="text-black/70 text-sm">{item.ubi}</p>
-            </div>
-            <div class="flex col-span-2 items-center gap-4 border-l pl-4 border-gray-200">
-              <img
-                src={item.speaker.avatar}
-                class="h-16 w-16 rounded-full"
-                alt=""
-              />
-              <div>
-                <h5 class="text-black font-semibold">{item.speaker.name}</h5>
-                <p class="text-black/70 text-xs">{item.speaker.job}</p>
-              </div>
-            </div>
-            <div class="col-span-3 border-l  pl-4 border-gray-200">
-              <h4 class="text-lg text-black font-semibold">{item.title}</h4>
-              <p class="text-black/70 text-xs">{item.description}</p>
-            </div>
-          </div>
-        ))
+        AGENDA1.map((item, index) =>
+          item.notPont ? (
+            <Notponencia {...item} />
+          ) : item.isPanel ? (
+            <Panel {...item} index={index} />
+          ) : (
+            <Ponencia {...item} index={index} />
+          )
+        )
       }
+      <h2 id="01-12-23" class="mt-8 text-2xl text-center font-bold">Agenda</h2>
+      <p class="mb-6 text-center text-black/70">01 de diciembre del 2023</p>
+      {
+        AGENDA2.map((item, index) =>
+          item.notPont ? (
+            <Notponencia {...item} />
+          ) : item.isPanel ? (
+            <Panel {...item} index={index} />
+          ) : (
+            <Ponencia {...item} index={index} />
+          )
+        )
+      }
+      <Notponencia hour="12:40 pm (PET)" title="Finalizacion del congreso" />
     </div>
   </Wrapper>
 </section>
