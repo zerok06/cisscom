@@ -17,7 +17,7 @@ const { index, hour, speakers, title, description, ubi } = Astro.props
       speakers.map(speaker => (
         <img
           src={speaker.avatar}
-          class={`h-16 inline-block  w-16 rounded-full relative speaker`}
+          class={`h-16 inline-block  w-16 rounded-full relative speaker-2 md:speaker-1`}
           alt=""
         />
       ))
@@ -34,7 +34,10 @@ const { index, hour, speakers, title, description, ubi } = Astro.props
   </div>
 </div>
 <style is:inline>
-  .speaker:nth-child(n + 2) {
+  .speaker-1:nth-child(n + 2) {
     margin-left: -25px;
+  }
+  .speaker-2:nth-child(n + 2) {
+    margin-top: -25px;
   }
 </style>

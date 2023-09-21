@@ -3,7 +3,7 @@ const { index, hour, speaker, title, description, ubi } = Astro.props
 ---
 
 <div
-  class="grid grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-5 px-8"
+  class="grid md:grid-cols-6 items-center gap-2 bg-[hsl(var(--primary))]/5 rounded-xl py-5 px-8"
 >
   <div>
     <h4 class="font-bold">Ponencia {index + 1}</h4>
@@ -19,8 +19,10 @@ const { index, hour, speaker, title, description, ubi } = Astro.props
       <p class="text-black/70 text-xs">{speaker.job}</p>
     </div>
   </div>
-  <div class="col-span-3 border-l pl-4 border-gray-200">
-    <h4 class="text-lg text-black font-semibold">{title}</h4>
-    <p class="text-black/70 text-xs">{description}</p>
+  <div class="col-span-3 md:border-l pl-4 border-gray-200">
+    <h4 class="text-lg text-center md:text-start text-black font-semibold">
+      {title}
+    </h4>
+    <p class="text-center md:text-start text-black/70 text-xs">{description}</p>
   </div>
 </div>

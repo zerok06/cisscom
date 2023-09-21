@@ -5,20 +5,28 @@ import Wrapper from '../wrapper.astro'
 
 <section class="py-20">
   <Wrapper>
-    <div class="grid grid-cols-2 gap-8 items-center">
-      <div class="flex flex-col gap-2 items-start">
-        <h3 class="text-xl font-medium text-[hsl(var(--primary))]">
+    <div
+      class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-8 items-center"
+    >
+      <div class="flex flex-col lg:items-start lg:justify-center gap-2">
+        <h3
+          class="text-center lg:text-start text-xl font-medium text-[hsl(var(--primary))]"
+        >
           Acerca del Evento
         </h3>
-        <h2 class="text-5xl font-bold">VI CISCCOM</h2>
-        <p class="text-black/70 w-[80%]">
+        <h2 class="text-4xl text-center lg:text-start lg:text-5xl font-bold">
+          VI CISCCOM
+        </h2>
+        <p class="text-center lg:text-start text-black/70 w-full lg:w-[80%]">
           En este evento “V Congreso Internacional de Sistemas y Ciencia de la
           Computación – CISCCOM” se expondrán las actuales tendencias de
           Inteligencia Artificial, Visión por Computadora, Procesamiento de
           Imagenes, con el fin de fortalecer los conocimientos y evaluar los
           avances en estas tendencias.
         </p>
-        <div class="grid grid-cols-2 gap-3 w-[80%]">
+        <div
+          class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-3 w-full lg:w-[80%]"
+        >
           <div
             class="py-4 px-6 flex items-center gap-4 flex-row bg-[hsl(var(--primary))]/10 text-black/50 rounded-xl"
           >
@@ -59,7 +67,7 @@ import Wrapper from '../wrapper.astro'
         <Button>Registrarse!</Button>
       </div>
       <div>
-        <div class="grid grid-cols-4 grid-rows-4 min-h-[500px] gap-6">
+        <div class="grid lg:grid-cols-4 lg:grid-rows-4 min-h-[500px] gap-6">
           <div
             class="col-span-4 row-span-2 bg-gray-300 rounded-2xl relative overflow-hidden"
           >
