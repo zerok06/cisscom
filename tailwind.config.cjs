@@ -6,6 +6,11 @@ module.exports = {
       fontFamily: {
         sans: ['Inter'],
       },
+      fontSize: {
+        '7xl': ['3.9rem', {
+          lineHeight: '1.1'
+        }],
+        }
     },
   },
   plugins: [],
