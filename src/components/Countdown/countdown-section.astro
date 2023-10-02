@@ -1,14 +1,84 @@
-<section
-  class="fixed z-20 bottom-0 left-[calc(50%-250px)] rounded-t-xl h-10 min-w-[500px] bg-black text-white"
->
-  <h2>Comienza en...</h2>
-  <div>
-    <span>01d</span>
-     :
-    <span>20h</span>
-     :
-    <span>30m</span>
-     :
-    <span>09s</span>
-  </div>
+---
+import Wrapper from '../wrapper.astro'
+---
+
+<section class="sticky z-20 top-0 bg-black left-0 h-[60px] w-full text-white">
+  <Wrapper>
+    <div class="flex justify-center md:justify-between items-center h-full">
+      <h2 class="leading-4 text-xl font-medium hidden md:block">Comienza...</h2>
+      <div class="flex flex-row flex-nowrap gap-4">
+        <span class="flex flex-col items-center gap-[2px] justify-center">
+          <span
+            class="text-lg leading-3 md:text-2xl font-medium md:leading-3"
+            id="days_time">00</span
+          >
+          <span class="text-xs text-white/80">Days</span>
+        </span>
+         :
+        <span class="flex flex-col items-center gap-[2px] justify-center">
+          <span
+            class="text-lg leading-3 md:text-2xl font-medium md:leading-3"
+            id="hrs_time">00</span
+          >
+          <span class="text-xs text-white/80">Hrs</span>
+        </span>
+         :
+        <span class="flex flex-col items-center gap-[2px] justify-center">
+          <span
+            class="text-lg leading-3 md:text-2xl font-medium md:leading-3"
+            id="mins_time">00</span
+          >
+          <span class="text-xs text-white/80">Mins</span>
+        </span>
+         :
+        <span class="flex flex-col items-center gap-[2px] justify-center">
+          <span
+            class="text-lg leading-3 md:text-2xl font-medium md:leading-3"
+            id="secs_time">00</span
+          >
+          <span class="text-xs text-white/80">Secs</span>
+        </span>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="bg-[hsl(var(--primary))] px-4 py-2 hidden md:block text-black rounded-3xl font-medium"
+        >
+          Obtener ticket!</a
+        >
+      </div>
+    </div>
+  </Wrapper>
 </section>
+<script>
+  const day = document.querySelector('#days_time')
+  const hrs = document.querySelector('#hrs_time')
+  const min = document.querySelector('#mins_time')
+  const sec = document.querySelector('#secs_time')
+  const event_date = new Date('2023-11-30T07:00:00')
+  setInterval(() => {
+    const current_time = new Date()
+    const diff = Math.abs(event_date - current_time)
+    const segundos = Math.floor(diff / 1000)
+    const minutos = Math.floor(segundos / 60)
+    const horas = Math.floor(minutos / 60)
+    const dias = Math.floor(horas / 24)
+
+    const segundosRestantes = segundos % 60
+    const minutosRestantes = minutos % 60
+    const horasRestantes = horas % 24
+
+    day.textContent = String(String(dias).length < 2 ? '0' : '').concat(
+      String(dias)
+    )
+    hrs.textContent = String(
+      String(horasRestantes).length < 2 ? '0' : ''
+    ).concat(String(horasRestantes))
+    min.textContent = String(
+      String(minutosRestantes).length < 2 ? '0' : ''
+    ).concat(String(minutosRestantes))
+    sec.textContent = String(
+      String(segundosRestantes).length < 2 ? '0' : ''
+    ).concat(String(segundosRestantes))
+  }, 1000)
+</script>

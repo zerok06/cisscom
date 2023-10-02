@@ -1,5 +1,4 @@
 ---
-import type { Code, Debug } from 'astro:components'
 import Wrapper from '../wrapper.astro'
 import Notponencia from './notponencia.astro'
 import Ponencia from './ponencia.astro'
@@ -186,11 +185,13 @@ const DAYS = [
   {
     day: '30 Nov.',
     fecha: '30-11-23',
+    code: 'day301123',
     active: true,
   },
   {
     day: '01 Dic.',
     fecha: '01-12-23',
+    code: 'day011223',
     active: false,
   },
 ]
@@ -206,9 +207,9 @@ const DAYS = [
     <div class="flex flex-row justify-center gap-4 my-8">
       {
         DAYS.map(item => (
-          <a href={`#${item.fecha}`}>
+          <label for={item.code} class="cursor-pointer circle_day">
             <div
-              class={`relative h-32 w-32 flex flex-col justify-center items-center text-center rounded-full border-[3px] border-[hsl(var(--primary))] ${
+              class={`relative  h-32 w-32 flex flex-col justify-center transition duration-300 items-center text-center rounded-full border-[3px] border-[hsl(var(--primary))] ${
                 item.active && 'bg-[hsl(var(--primary))]'
               }`}
             >
@@ -225,52 +226,110 @@ const DAYS = [
                   </svg>
                 </span>
               )}
-              <h2
-                class={`font-semibold text-lg ${
-                  item.active ? ' text-white' : ' text-black'
-                }`}
-              >
-                {item.day}
-              </h2>
-              <p
-                class={`text-sm ${item.active ? ' text-white' : ' text-black'}`}
-              >
-                {item.fecha}
-              </p>
+              <h2 class="font-semibold text-lg text-inherit">{item.day}</h2>
+              <p class="text-sm text-inherit">{item.fecha}</p>
             </div>
-          </a>
+          </label>
         ))
       }
     </div>
 
-    <div class="flex flex-col gap-3">
-      <h2 id="30-11-23" class="mt-8 text-2xl text-center font-bold">Agenda</h2>
-      <p class="mb-6 text-center text-black/70">30 de noviembre del 2023</p>
-      {
-        AGENDA1.map((item, index) =>
-          item.notPont ? (
-            <Notponencia {...item} />
-          ) : item.isPanel ? (
-            <Panel {...item} index={index} />
-          ) : (
-            <Ponencia {...item} index={index} />
+    <div>
+      <input
+        type="radio"
+        checked
+        name="fecha"
+        class="h-0 w-0 invisible control_check"
+        id="day301123"
+      />
+      <input
+        type="radio"
+        name="fecha"
+        class="h-0 w-0 invisible control_check"
+        id="day011223"
+      />
+
+      <div class="flex flex-col gap-3 day301123">
+        <h2 id="30-11-23" class="mt-8 text-5xl text-center font-bold">Dia 1</h2>
+        <p class="mb-6 text-center text-black/70">30 de noviembre del 2023</p>
+        {
+          AGENDA1.map((item, index) =>
+            item.notPont ? (
+              <Notponencia {...item} />
+            ) : item.isPanel ? (
+              <Panel {...item} index={index} />
+            ) : (
+              <Ponencia {...item} index={index} />
+            )
           )
-        )
-      }
-      <h2 id="01-12-23" class="mt-8 text-2xl text-center font-bold">Agenda</h2>
-      <p class="mb-6 text-center text-black/70">01 de diciembre del 2023</p>
-      {
-        AGENDA2.map((item, index) =>
-          item.notPont ? (
-            <Notponencia {...item} />
-          ) : item.isPanel ? (
-            <Panel {...item} index={index} />
-          ) : (
-            <Ponencia {...item} index={index} />
+        }
+      </div>
+      <div class="flex flex-col gap-3 day011223">
+        <h2 id="01-12-23" class="mt-8 text-5xl text-center font-bold">Dia 2</h2>
+        <p class="mb-6 text-center text-black/70">01 de diciembre del 2023</p>
+        {
+          AGENDA2.map((item, index) =>
+            item.notPont ? (
+              <Notponencia {...item} />
+            ) : item.isPanel ? (
+              <Panel {...item} index={index} />
+            ) : (
+              <Ponencia {...item} index={index} />
+            )
           )
-        )
-      }
-      <Notponencia hour="12:40 pm (PET)" title="Finalizacion del congreso" />
+        }
+        <Notponencia hour="12:40 pm (PET)" title="Finalizacion del congreso" />
+      </div>
     </div>
   </Wrapper>
 </section>
+<style>
+  #day301123:checked ~ .day301123 {
+    display: flex;
+    opacity: 1;
+    animation: view_card 0.3s ease-in-out;
+  }
+  #day011223:checked ~ .day011223 {
+    display: flex;
+    opacity: 1;
+    animation: view_card 0.3s ease-in-out;
+  }
+
+  @keyframes view_card {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .day011223 {
+    display: none;
+  }
+  .day301123 {
+    display: none;
+  }
+</style>
+<script>
+  /* Pasar por alto los warnings, es por tema de tipado del propio editor. */
+
+  const controls = document.querySelectorAll('.control_check')
+  const days = document.querySelectorAll('.circle_day')
+  controls.forEach(control => {
+    control.addEventListener('change', e => {
+      if (control.checked) {
+        days.forEach(day => {
+          const currentDay = day.firstElementChild
+          if (control.id == day.getAttribute('for')) {
+            currentDay.style.background = 'hsl(var(--primary))'
+            currentDay.style.color = '#fff'
+          } else {
+            currentDay.style.background = 'transparent'
+            currentDay.style.color = '#000'
+          }
+        })
+      }
+    })
+  })
+</script>
