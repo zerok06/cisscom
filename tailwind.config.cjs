@@ -7,7 +7,7 @@ module.exports = {
         sans: ['Inter'],
       },
       fontSize: {
-        '7xl': ['3.9rem', {
+        '7xl': ['3.3rem', {
           lineHeight: '1.1'
         }],
         }

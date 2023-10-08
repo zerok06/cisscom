@@ -3,93 +3,106 @@ import Wrapper from '../wrapper.astro'
 /* solo 3 sponsors y multiplicarlos por 4 */
 const team = [
   {
-    name: 'UNAM',
+    name: 'foxtech',
     url: '',
-    image: '/assets/sponsor/IEEE.png',
-    job: 'Partner',
+    image: '/assets/sponsor/foxtech.png',
+    job: 'Sponsor',
   },
 
   {
-    name: 'AI-MARA',
-    image: '/assets/logoSistemas.png',
-    job: 'Partner',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'UNAM',
+    name: 'digitaltech2',
     url: '',
-    image: '/assets/sponsor/IEEE.png',
-    job: 'Partner',
+    image: '/assets/sponsor/digitaltech2.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'asana',
+    url: '',
+    image: '/assets/sponsor/asana4.png',
+    job: 'Sponsor',
   },
 
   {
-    name: 'AI-MARA',
-    image: '/assets/logoSistemas.png',
-    job: 'Partner',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'UNAM',
+    name: 'foxtech',
     url: '',
-    image: '/assets/sponsor/IEEE.png',
-    job: 'Partner',
+    image: '/assets/sponsor/foxtech.png',
+    job: 'Sponsor',
   },
 
   {
-    name: 'AI-MARA',
-    image: '/assets/logoSistemas.png',
-    job: 'Partner',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'UNAM',
+    name: 'digitaltech2',
     url: '',
-    image: '/assets/sponsor/IEEE.png',
-    job: 'Partner',
+    image: '/assets/sponsor/digitaltech2.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'asana',
+    url: '',
+    image: '/assets/sponsor/asana4.png',
+    job: 'Sponsor',
   },
 
   {
-    name: 'AI-MARA',
-    image: '/assets/logoSistemas.png',
-    job: 'Partner',
+    name: 'foxtech',
+    url: '',
+    image: '/assets/sponsor/foxtech.png',
+    job: 'Sponsor',
   },
+
   {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
+    name: 'digitaltech2',
+    url: '',
+    image: '/assets/sponsor/digitaltech2.png',
     job: 'Sponsor',
   },
   {
-    name: 'Sponsor1',
-    image: '/assets/sponsor/asana.png',
+    name: 'asana',
+    url: '',
+    image: '/assets/sponsor/asana4.png',
     job: 'Sponsor',
   },
+
+  {
+    name: 'foxtech',
+    url: '',
+    image: '/assets/sponsor/foxtech.png',
+    job: 'Sponsor',
+  },
+
+  {
+    name: 'digitaltech2',
+    url: '',
+    image: '/assets/sponsor/digitaltech2.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'asana',
+    url: '',
+    image: '/assets/sponsor/asana4.png',
+    job: 'Sponsor',
+  },
+
+  {
+    name: 'foxtech',
+    url: '',
+    image: '/assets/sponsor/foxtech.png',
+    job: 'Sponsor',
+  },
+
+  {
+    name: 'digitaltech2',
+    url: '',
+    image: '/assets/sponsor/digitaltech2.png',
+    job: 'Sponsor',
+  },
+  {
+    name: 'asana',
+    url: '',
+    image: '/assets/sponsor/asana4.png',
+    job: 'Sponsor',
+  },
+  
+
 ]
 const IMPORTANT_PARTNERS = [
   {
@@ -105,6 +118,12 @@ const IMPORTANT_PARTNERS = [
   },
 
   {
+    name: 'IEEE',
+    image: '/assets/sponsor/IEEE.png',
+    job: 'Partner',
+  },
+
+  {
     name: 'AI-MARA',
     image: '/assets/logo_AIMARA.png',
     job: 'Partner',
@@ -116,12 +135,12 @@ const IMPORTANT_PARTNERS = [
   <Wrapper>
     <h2 class="text-4xl text-center font-bold mt-3">Partners y Sponsors</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-5">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 my-5">
       {
         IMPORTANT_PARTNERS.map(item => (
           <a
             href="#"
-            class="px-10 py-4 border-2 flex justify-center group border-gray-200 transition-all duration-500 hover:border-[hsl(var(--primary))] rounded-2xl"
+            class="px-15 py-4 border-2 flex justify-center group border-gray-200 transition-all duration-500 hover:border-[hsl(var(--primary))] rounded-2xl"
           >
             <div>
               <img
