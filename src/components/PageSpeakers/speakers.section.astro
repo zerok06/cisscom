@@ -1,0 +1,70 @@
+---
+import Wrapper from '../wrapper.astro'
+import Speaker from './speaker.astro'
+
+const SPEAKERS = [
+  {
+    name: 'Edward Cayllahua Cahuina',
+    description:
+      'Edward Cayllahua-Cahuina, investigador en el campo de la Ciencia de la Computación, tiene una maestría en Ciencia de la Computación de la Universidade Federal De Ouro Preto, obtuvo un doctorado conjunto por la Universidad Federal de Minas Gerais en Brasil y la Universidad Gustave-Eiffel en Francia. Sus principales áreas de investigación abarcan la visión computacional, el reconocimiento de patrones, el aprendizaje automático.',
+    avatar: '/assets/speakers/edward.png',
+    url: 'https://www.linkedin.com/in/edwardcayllahua/',
+  },
+  {
+    name: 'José Eduardo Ochoa Luna',
+    description:
+      'José Eduardo Ochoa Luna, Doctor en Ciencias de la Computación de la Escola Politecnica da Universidade de São Paulo en Brasil, también cuenta con una maestría en Ciencia de la Computación de la Universidade Federal de Mato Grosso do Sul. Sus áreas de experiencia se centran en el campo de la Ciencia de la Computación, con un enfoque especial en la Inteligencia Artificial. Ha trabajado en temas como Aprendizaje de Máquina, Lógica Probabilística, Redes Bayesianas, Análisis de Redes Sociales, Deep Learning y Procesamiento de Lenguaje Natural.',
+    avatar: '/assets/speakers/jose.png',
+    url: 'https://www.linkedin.com/in/jos%C3%A9-eduardo-ochoa-luna-6451b78/',
+  },
+  {
+    name: 'Juan Carlos Gutiérrez Cáceres',
+    description:
+      'Doctor en Ciencias de la Computación por la Cátedra CONCYTEC de la Universidad Nacional de San Agustín (Perú). Master en Ciencias de la Computación y Matemática Computacional, realizado en el Instituto de Ciencias Matemáticas y de Computación (ICMC) de la Universidad de São Paulo (Brasil). Miembro fundador de la Sociedad Peruana de Computación (SPC) Perú. Actualmente es Docente Investigador en la Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín de Arequipa Desempeñó el cargo de Director de Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín (Arequipa - Perú). Profesor en el Programa Profesional de Ingeniería Informática en la Universidad Católica San Pablo (Arequipa - Perú) Áreas de interés: Deep Learning Redes Complejas Reconocimiento de Patrones, Redes Neuronales, Sistemas dinámicos no lineales, Procesamiento de Imágenes.',
+    avatar: '/assets/speakers/juan.png',
+    url: 'https://www.linkedin.com/in/juan-carlos-gutierrez-caceres-b1a58b261/',
+  },
+  {
+    name: 'Alex Cuadros',
+    description:
+      'Alex Cuadros es doctor y magister en Ciencias Matemáticas y de Computación por la Universidad de Sao Paulo, Brasil. Realizó un posdoctorado en la misma universidad, investigando sobre generación de mallas a partir de imágenes. También fue investigador invitado en el Department of Radiology de la University of Pennsylvania (UPENN), Estados Unidos, y profesor invitado en el Scientific Computing and Imaging Institute (SCI) de la Utah State University, Estados Unidos.',
+    avatar: '/assets/speakers/alex.png',
+    url: 'https://www.linkedin.com/in/alex-cuadros-vargas/',
+  },
+  {
+    name: 'Manuel Loaiza',
+    description:
+      'Manuel Loaiza Fernandez es un investigador con experiencia en los campos de visualización científica, visualización de modelos 3D, visión por computadora, realidad virtual y aumentada. Tiene un doctorado en Ciencias de la Computación de la PUC-Rio y una maestría en Ciencias de la Computación de la misma universidad. Sus principales contribuciones a la investigación incluyen el desarrollo de un nuevo algoritmo de renderizado acelerado para visualización científica y una nueva técnica para visualización de modelos 3D. ',
+    avatar: '/assets/speakers/manuel.png',
+    url: 'https://www.linkedin.com/in/manueleduardoloaizafernandez/',
+  },
+  {
+    name: 'Yessenia Yari',
+    description:
+      'Yari Ramos Yessenia Deysi realizó sus estudios de Maestría en la Universidade Federal do Rio Grande do Sul, Brasil, obteniendo el grado de Master en Ciencia de la Computación y los de doctorado en la Universidad Nacional de San Agustín de Arequipa. Actualmente trabaja como docente en la Universidad Nacional de San Agustin de Arequipa y en la Universidad San Pablo. Sus areas de interés  son procesamiento de imágenes, visión computacional e inteligencia artificial.',
+    avatar: '/assets/speakers/yessenia.png',
+    url: 'https://www.linkedin.com/in/yessenia-yari-b4778139/',
+  },
+  {
+    name: 'Omar U. Flores',
+    description:
+      'Omar U. Florez es graduado como doctor en Ciencias de la Computación por Utah State University, Ses un científico de la computación con experiencia en investigación en Twitter, Capital One e Intel Labs. Sus intereses de investigación se centran en el aprendizaje automático para la comprensión del lenguaje natural y las imágenes.',
+    avatar: '/assets/speakers/omar.png',
+    url: 'https://www.linkedin.com/in/omar-u-florez/',
+  },
+  {
+    name: 'Arturo Deza',
+    description:
+      'Arturo Deza es un investigador y académico peruano especializado en ciencia de la computación y neurociencia. Tiene un doctorado en Neurociencia Dinámica de la Universidad de California, Santa Bárbara (UCSB), y ha realizado investigaciones posdoctorales en el MIT y la Universidad de Harvard. Sus contribuciones incluyen publicaciones revisadas por pares y una amplia revisión para conferencias y revistas de renombre en el campo de la inteligencia artificial y la neurociencia. ',
+    avatar: '/assets/speakers/arturo.png',
+    url: 'https://www.linkedin.com/in/arturo-deza-9b12324a/',
+  },
+]
+---
+
+<Wrapper>
+  <h2 class="text-4xl text-center font-bold my-10">Speakers</h2>
+  <div class="flex flex-col gap-10">
+    {SPEAKERS.map((item, index) => <Speaker {...item} index={index} />)}
+  </div>
+</Wrapper>

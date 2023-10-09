@@ -5,6 +5,7 @@ import Ponencia from './ponencia.astro'
 import Panel from './panel.astro'
 
 const AGENDA1 = [
+  { notPont: true, hour: '13:45 pm (PET)', title: 'Charla de Bienvenida' },
   {
     hour: '14:00 pm (PET)',
     ubi: 'Auditorio EPISI',
@@ -20,7 +21,8 @@ const AGENDA1 = [
   {
     hour: '14:40 pm (PET)',
     ubi: 'Auditorio EPISI',
-    title: 'La Inteligencia Artificial Generativa, su impacto en el trabajo y las empresas.',
+    title:
+      'La Inteligencia Artificial Generativa, su impacto en el trabajo y las empresas.',
     description: '',
     speaker: {
       name: 'José Eduardo Ochoa Luna',
@@ -34,7 +36,8 @@ const AGENDA1 = [
     hour: '15:20 pm (PET)',
     ubi: 'Auditorio EPISI',
     title: 'Hub de talento en tecnología en el Perú y el mundo',
-    description: ' Jose Ochoa, Edward Cayllahua,  Alex Cuadros y Honorio Apaza (Moderador)',
+    description:
+      ' Jose Ochoa, Edward Cayllahua,  Alex Cuadros y Honorio Apaza (Moderador)',
     speakers: [
       {
         name: 'José Eduardo Ochoa Luna',
@@ -58,7 +61,8 @@ const AGENDA1 = [
   {
     hour: '16:20 pm (PET)',
     ubi: 'Auditorio EPISI',
-    title: 'Detección de violencia en video vigilancia usando redes transformers',
+    title:
+      'Detección de violencia en video vigilancia usando redes transformers',
     description: '',
     speaker: {
       name: 'Juan Carlos Gutiérrez Cáceres',
@@ -84,7 +88,8 @@ const AGENDA1 = [
     hour: '18:40 pm (PET)',
     ubi: 'Auditorio EPISI',
     title: 'Qué profesionales necesita Perú para la transformación digital',
-    description: 'Juan Carlos Gutiérrez, Alex Cuadros, Anibal Flores y Honorio Apaza (Moderador)',
+    description:
+      'Juan Carlos Gutiérrez, Alex Cuadros, Anibal Flores y Honorio Apaza (Moderador)',
     speakers: [
       {
         avatar: '/assets/speakers/alex.png',
@@ -135,7 +140,8 @@ const AGENDA2 = [
     ubi: 'Auditorio EPISI',
     title:
       'Empoderamiento Femenino en la Era Digital: Mujeres en la Computación',
-    description: 'Yessenia Yari, Manuel Loaiza, Maribel Coaguila y Allison Reynoso (Moderadora)',
+    description:
+      'Yessenia Yari, Manuel Loaiza, Maribel Coaguila y Allison Reynoso (Moderadora)',
     speakers: [
       {
         avatar: '/assets/speakers/yessenia.png',
@@ -197,7 +203,7 @@ const DAYS = [
 ]
 ---
 
-<section id="agenda" class="py-20">
+<section id="agenda" class="py-20" data-aos="fade-up" data-aos-duration="500">
   <Wrapper>
     <h2 class="text-black text-4xl font-bold text-center">Agenda del Evento</h2>
     <p class="text-black/70 text-center mx-auto my-4 lg:w-[60%]">
