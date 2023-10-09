@@ -1,8 +1,10 @@
 ---
-import Button from '../button.astro'
+import Countdown from '../Countdown/countdown.component.astro'
 ---
 
-<section class="h-[calc(84vh-108px)] flex justify-start items-center relative">
+<section
+  class="h-[calc(84vh-108px)] flex justify-between items-center relative"
+>
   <div
     class="flex flex-col items-center lg:items-start gap-2 md:gap-6 lg:max-w-[60%]"
   >
@@ -12,7 +14,7 @@ import Button from '../button.astro'
       Evento
     </h4>
     <h1
-      class="text-white text-center lg:text-left font-bold text-3xl sm:text-4xl md:text-4xl lg:text-7xl 2xl:text-7xl "
+      class="text-white text-center lg:text-left font-bold text-3xl sm:text-4xl md:text-4xl lg:text-7xl 2xl:text-7xl"
     >
       VI Congreso Internacional de Sistemas y Ciencias de la Computación
     </h1>
@@ -20,8 +22,14 @@ import Button from '../button.astro'
       <p class="text-white/80">30 de noviembre de 2023 (GMT-5)</p>
       <p class="text-white/80">2:00 PM - 19:30 PM</p>
     </div>
+    <Countdown />
     <div class="flex gap-5">
-      <Button>Obtener ticket!</Button>
+      <a
+        class="px-6 py-2 text-sm font-medium hover:opacity-95 transition-opacity rounded-full bg-primary"
+        href="https://cisccom.vercel.app/signin"
+        target="_blank"
+        rel="noopener noreferrer">Obtener ticket!</a
+      >
       <a
         target="_blank"
         href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N2puZjB2M2VtaWVrZG1rYmU4dmplbjZnZ2MgZmFtaWx5MTA5MTc5OTEwNjU4MzU3MzE3NjZAZw&tmsrc=family10917991065835731766%40group.calendar.google.com"
@@ -41,4 +49,70 @@ import Button from '../button.astro'
       </a>
     </div>
   </div>
+  <div class="relative">
+    <a
+      href="#"
+      class="p-1 animate delay_1 bg-white absolute rounded-md bottom-52 left-36"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/keras.png" alt="keras" />
+    </a>
+    <a
+      href="#"
+      class="p-1 animate delay_1 bg-white absolute rounded-md bottom-32 left-2"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/numpy.png" alt="keras" />
+    </a>
+    <a
+      href="#"
+      class="p-1 animate delay_2 bg-white absolute rounded-md bottom-20 right-10"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/pandas.png" alt="keras" />
+    </a>
+    <a href="#" class="p-1 animate bg-white absolute rounded-md left-9 top-72">
+      <img class="h-14 w-14" src="/assets/hero/tools/py.png" alt="keras" />
+    </a>
+    <a
+      href="#"
+      class="p-1 animate bg-white absolute rounded-md bottom-60 right-20"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/pytorch.png" alt="keras" />
+    </a>
+    <a
+      href="#"
+      class="p-1 animate delay_1 bg-white absolute rounded-md right-14 top-72"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/tensor.png" alt="keras" />
+    </a>
+    <a
+      href="#"
+      class="p-1 animate delay_3 bg-white absolute rounded-md bottom-32 right-32"
+    >
+      <img class="h-14 w-14" src="/assets/hero/tools/ts.png" alt="keras" />
+    </a>
+    <img
+      src="/assets/hero/people_1.png"
+      class="hidden md:block md:h-full"
+      alt=""
+    />
+    <!-- <img src="/assets/hero/people_2.png" alt="" /> -->
+  </div>
 </section>
+<style>
+  .animate {
+    animation: 3s picture-animation infinite alternate ease-in-out;
+  }
+  .delay_1 {
+    animation-delay: -1s;
+  }
+  .delay_2 {
+    animation-delay: -2s;
+  }
+  .delay_3 {
+    animation-delay: -3s;
+  }
+  @keyframes picture-animation {
+    to {
+      transform: translateY(1rem);
+    }
+  }
+</style>

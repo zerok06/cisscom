@@ -26,10 +26,12 @@ const { name, description, avatar, url } = Astro.props
       />
     </a>
   </div>
-  <h2
-    class="text-center text-xl font-semibold group-hover:underline -pointcursorer"
-  >
-    {name}
-  </h2>
+  <a href={`/speakers/#${name}`}>
+    <h2
+      class="text-center text-xl font-semibold group-hover:underline -pointcursorer"
+    >
+      {name}
+    </h2>
+  </a>
   <p class="text-center text-black/80">{description}</p>
 </div>
