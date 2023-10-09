@@ -17,7 +17,7 @@ const { index, hour, speakers, title, description, ubi } = Astro.props
       speakers.map(speaker => (
         <img
           src={speaker.avatar}
-          class={`h-16 inline-block  w-16 rounded-full relative speaker`}
+          class={`h-16 inline-block object-cover w-16 rounded-full relative speaker`}
           alt=""
         />
       ))
