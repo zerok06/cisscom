@@ -4,125 +4,133 @@ import Wrapper from '../wrapper.astro'
 const team = [
   {
     name: 'foxtech',
-    url: '',
+    url: 'https://foxtechilo.com',
     image: '/assets/sponsor/foxtech.png',
     job: 'Sponsor',
   },
 
   {
     name: 'digitaltech2',
-    url: '',
+    url: 'https://www.digitaltech.com.pe/',
     image: '/assets/sponsor/digitaltech2.png',
     job: 'Sponsor',
   },
   {
     name: 'asana',
-    url: '',
+    url: 'https://www.facebook.com/agua.asana',
     image: '/assets/sponsor/asana4.png',
     job: 'Sponsor',
   },
 
+  {
+    name: 'MarketPhone',
+    url: 'https://www.facebook.com/marketphoneILO',
+    image: '/assets/sponsor/market.jpeg',
+    job: 'Sponsor',
+  },
   {
     name: 'foxtech',
-    url: '',
+    url: 'https://foxtechilo.com',
     image: '/assets/sponsor/foxtech.png',
     job: 'Sponsor',
   },
 
   {
     name: 'digitaltech2',
-    url: '',
+    url: 'https://www.digitaltech.com.pe/',
     image: '/assets/sponsor/digitaltech2.png',
     job: 'Sponsor',
   },
   {
     name: 'asana',
-    url: '',
+    url: 'https://www.facebook.com/agua.asana',
     image: '/assets/sponsor/asana4.png',
     job: 'Sponsor',
   },
 
+  {
+    name: 'MarketPhone',
+    url: 'https://www.facebook.com/marketphoneILO',
+    image: '/assets/sponsor/market.jpeg',
+    job: 'Sponsor',
+  },
   {
     name: 'foxtech',
-    url: '',
+    url: 'https://foxtechilo.com',
     image: '/assets/sponsor/foxtech.png',
     job: 'Sponsor',
   },
 
   {
     name: 'digitaltech2',
-    url: '',
+    url: 'https://www.digitaltech.com.pe/',
     image: '/assets/sponsor/digitaltech2.png',
     job: 'Sponsor',
   },
   {
     name: 'asana',
-    url: '',
+    url: 'https://www.facebook.com/agua.asana',
     image: '/assets/sponsor/asana4.png',
     job: 'Sponsor',
   },
 
+  {
+    name: 'MarketPhone',
+    url: 'https://www.facebook.com/marketphoneILO',
+    image: '/assets/sponsor/market.jpeg',
+    job: 'Sponsor',
+  },
   {
     name: 'foxtech',
-    url: '',
+    url: 'https://foxtechilo.com',
     image: '/assets/sponsor/foxtech.png',
     job: 'Sponsor',
   },
 
   {
     name: 'digitaltech2',
-    url: '',
+    url: 'https://www.digitaltech.com.pe/',
     image: '/assets/sponsor/digitaltech2.png',
     job: 'Sponsor',
   },
   {
     name: 'asana',
-    url: '',
+    url: 'https://www.facebook.com/agua.asana',
     image: '/assets/sponsor/asana4.png',
     job: 'Sponsor',
   },
 
   {
-    name: 'foxtech',
-    url: '',
-    image: '/assets/sponsor/foxtech.png',
-    job: 'Sponsor',
-  },
-
-  {
-    name: 'digitaltech2',
-    url: '',
-    image: '/assets/sponsor/digitaltech2.png',
-    job: 'Sponsor',
-  },
-  {
-    name: 'asana',
-    url: '',
-    image: '/assets/sponsor/asana4.png',
+    name: 'MarketPhone',
+    url: 'https://www.facebook.com/marketphoneILO',
+    image: '/assets/sponsor/market.jpeg',
     job: 'Sponsor',
   },
 ]
 const IMPORTANT_PARTNERS = [
   {
+    url: 'https://unam.edu.pe/',
     name: 'UNAM',
     image: '/assets/logo-u.png',
     job: 'Partner',
   },
 
   {
+    url: 'https://ieee.org.pe',
+    name: 'IEEE',
+    image: '/assets/sponsor/IEEE.png',
+    job: 'Partner',
+  },
+  {
+    url: 'https://www.facebook.com/ing.sistemas.unam',
     name: 'Sponsor1',
     image: '/assets/logoSistemas.png',
     job: 'Sponsor',
   },
 
   {
-    name: 'IEEE',
-    image: '/assets/sponsor/IEEE.png',
-    job: 'Partner',
-  },
-
-  {
     name: 'AI-MARA',
+    url: 'https://www.facebook.com/aimara.group',
     image: '/assets/logo_AIMARA.png',
     job: 'Partner',
   },
@@ -137,7 +145,8 @@ const IMPORTANT_PARTNERS = [
       {
         IMPORTANT_PARTNERS.map(item => (
           <a
-            href="#"
+            href={item.url}
+            target="_blank"
             class="px-15 py-4 border-2 flex justify-center group border-gray-200 transition-all duration-500 hover:border-[hsl(var(--primary))] rounded-2xl"
           >
             <div>
@@ -165,7 +174,8 @@ const IMPORTANT_PARTNERS = [
         {
           team.map(item => (
             <a
-              href="#"
+              href={item.url}
+              target="_blank"
               class="min-w-[50px] h-24 py-4 px-12 group bg-white rounded-xl flex justify-center items-center"
             >
               <li class="">
