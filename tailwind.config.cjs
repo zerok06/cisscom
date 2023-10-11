@@ -7,8 +7,8 @@ module.exports = {
         sans: ['Inter'],
       },
       fontSize: {
-        '5xl': ['2.8rem', {
-          lineHeight: '1.1'
+        '7xl': ['2.9rem', {
+          lineHeight: '1'
         }],
         }
     },
