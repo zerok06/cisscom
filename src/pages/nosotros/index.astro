@@ -1,0 +1,20 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import NavBar from '../../components/Hero/navbar.astro'
+import Wrapper from '../../components/wrapper.astro'
+import Footer from '../../components/footer.astro'
+import Nosotros from '../../components/PageNosotros/nosotros.astro'
+
+---
+
+<DefaultLayout title="VI CISSCOM">
+  <header class="bg-black pb-4">
+    <Wrapper>
+      <NavBar theme="light" />
+    </Wrapper>
+  </header>
+  <main class="py-8">
+    <Nosotros></Nosotros>
+  </main>
+  <Footer />
+</DefaultLayout>
