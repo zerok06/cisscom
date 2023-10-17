@@ -2,9 +2,9 @@
 const { name, description, avatar, url } = Astro.props
 ---
 
+<div id={name}></div>
 <section
   class="grid grid-cols-1 items-center md:grid-cols-3 md:items-start gap-14 py-10 border-b border-gray-200"
-  id={name}
   data-aos="fade-up"
   data-aos-duration="500"
 >

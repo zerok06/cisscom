@@ -8,7 +8,7 @@ import Countdown from '../Countdown/countdown.component.astro'
   <div
     class="flex flex-col items-center lg:items-start gap-2 md:gap-3 lg:gap-5 lg:max-w-[60%]"
   >
-    <h4 
+    <h4
       class="text-[hsl(var(--primary))] text-center lg:text-left text-xl font-semibold"
     >
       Evento
@@ -61,75 +61,80 @@ import Countdown from '../Countdown/countdown.component.astro'
       />
     </a>
     <a
-    href="#"
-    class="p-1 animate delay_1 bg-white absolute rounded-md bottom-16 left-20"
-  >
-    <img
-      class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
-      src="/assets/hero/tools/numpy.png"
-      alt="numpy"
-    />
-
-    <a
       href="#"
-      class="p-1 animate delay_2 bg-white absolute rounded-md bottom-20 right-10"
+      class="p-1 animate delay_1 bg-white absolute rounded-md bottom-16 left-20"
     >
       <img
         class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
-        src="/assets/hero/tools/pandas.png"
-        alt="keras"
+        src="/assets/hero/tools/numpy.png"
+        alt="numpy"
       />
-    </a>
 
-
-    <a
-      href="#"
-      class="p-1 animate delay_1 bg-white absolute rounded-md right-14 top-72"
-    >
-      <img
-        class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
-        src="/assets/hero/tools/tensor.png"
-        alt="keras"
-      />
-    </a>
-    <a
-      href="#"
-      class="p-1 animate delay_3 bg-white absolute rounded-md bottom-32 right-32"
-    >
-      <img
-        class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
-        src="/assets/hero/tools/ts.png"
-        alt="keras"
-      />
       <a
-      href="#"
-      class="p-1 animate delay_1 bg-white absolute rounded-md bottom-32 left-2"
-    >
-      <img
-        class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
-        src="/assets/hero/tools/py.png"
+        href="#"
+        class="p-1 animate delay_2 bg-white absolute rounded-md bottom-20 right-10"
+      >
+        <img
+          class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
+          src="/assets/hero/tools/pandas.png"
+          alt="keras"
         />
+      </a>
+
+      <a
+        href="#"
+        class="p-1 animate delay_1 bg-white absolute rounded-md right-14 top-72"
+      >
+        <img
+          class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
+          src="/assets/hero/tools/tensor.png"
+          alt="keras"
+        />
+      </a>
+      <a
+        href="#"
+        class="p-1 animate delay_3 bg-white absolute rounded-md bottom-32 right-32"
+      >
+        <img
+          class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
+          src="/assets/hero/tools/ts.png"
+          alt="keras"
+        />
+        <a
+          href="#"
+          class="p-1 animate delay_1 bg-white absolute rounded-md bottom-32 left-2"
+        >
+          <img
+            class="sm:h-5 sm:w-5 md:h-9 md:w-9 lg:h-11 lg:w-11"
+            src="/assets/hero/tools/py.png"
+          />
+        </a>
+        <img
+          src="/assets/hero/people_1.png"
+          alt=""
+          class="2xl:h-[600px] lg:h-[400px] object-contain"
+        />
+        <!-- <img src="/assets/hero/people_2.png" alt="" /> -->
+      </a>
     </a>
-    <img src="/assets/hero/people_1.png" alt="" />
-    <!-- <img src="/assets/hero/people_2.png" alt="" /> -->
+    <style>
+      .animate {
+        animation: 3s picture-animation infinite alternate ease-in-out;
+      }
+      .delay_1 {
+        animation-delay: -1s;
+      }
+      .delay_2 {
+        animation-delay: -2s;
+      }
+      .delay_3 {
+        animation-delay: -3s;
+      }
+      @keyframes picture-animation {
+        to {
+          transform: translateY(1rem);
+        }
+      }
+    </style>
   </div>
 </section>
-<style> 
-  .animate {
-    animation: 3s picture-animation infinite alternate ease-in-out;
-  }
-  .delay_1 {
-    animation-delay: -1s;
-  }
-  .delay_2 {
-    animation-delay: -2s;
-  }
-  .delay_3 {
-    animation-delay: -3s;
-  }
-  @keyframes picture-animation {
-    to {
-      transform: translateY(1rem);
-    }
-  }
-</style>
