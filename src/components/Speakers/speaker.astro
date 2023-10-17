@@ -34,4 +34,7 @@ const { name, description, avatar, url } = Astro.props
     </h2>
   </a>
   <p class="text-center text-sm prop text-black/80">{description}</p>
+  <p class="text-center text-sm prop text-black/50 mt-1">
+    <a href={`/speakers/#${name}`} class="hover:underline">Ver más</a>
+  </p>
 </div>
