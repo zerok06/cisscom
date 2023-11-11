@@ -6,55 +6,83 @@ import Speaker from './speaker.astro'
 const SPEAKERS = [
   {
     name: 'Edward Cayllahua Cahuina',
-    description: 'Hierarchical image segmentation algorithms',
+    description: 'Ponencia: Hierarchical image segmentation algorithms',
     avatar: '/assets/speakers/edward.png',
     url: 'https://www.linkedin.com/in/edwardcayllahua/',
   },
   {
     name: 'José Eduardo Ochoa Luna',
     description:
-      'La Inteligencia Artificial Generativa, su impacto en el trabajo y las empresas.',
+      'Ponencia: La Inteligencia Artificial Generativa, su impacto en el trabajo y las empresas.',
     avatar: '/assets/speakers/jose.png',
     url: 'https://www.linkedin.com/in/jos%C3%A9-eduardo-ochoa-luna-6451b78/',
   },
   {
     name: 'Juan Carlos Gutiérrez Cáceres',
     description:
-      'Detección de violencia en video vigilancia usando redes transformers',
+      'Ponencia: Detección de violencia en video vigilancia usando redes transformers',
     avatar: '/assets/speakers/juan.png',
     url: 'https://www.linkedin.com/in/juan-carlos-gutierrez-caceres-b1a58b261/',
   },
   {
     name: 'Ernesto Cuadros',
     description:
-      'Perfiles internacionales de las carreras de Computación según ACM/IEEE-CS Computing Curricula CC2020',
+      'Ponencia: Perfiles internacionales de las carreras de Computación según ACM/IEEE-CS Computing Curricula CC2020',
     avatar: '/assets/speakers/ernesto2.jpg',
     url: 'https://www.linkedin.com/in/ecuadrosv/?originalSubdomain=pe',
   },
   {
     name: 'Manuel Loaiza',
-    description: 'Adiós Industria 4.0, el por qué nos dirigimos a la Industria 5.0',
+    description: 'Ponencia: Adiós Industria 4.0, el por qué nos dirigimos a la Industria 5.0',
     avatar: '/assets/speakers/manuel.png',
     url: 'https://www.linkedin.com/in/manueleduardoloaizafernandez/',
   },
   {
     name: 'Yessenia Yari',
-    description: 'Binarizacion híbrida para el degradado de documentos históricos ',
+    description: 'Ponencia: Binarizacion híbrida para el degradado de documentos históricos ',
     avatar: '/assets/speakers/yessenia.png',
     url: 'https://www.linkedin.com/in/yessenia-yari-b4778139/',
   },
   {
     name: 'Omar U. Flores',
-    description: 'Como funciona ChatGPT por dentro',
+    description: 'Ponencia: Como funciona ChatGPT por dentro',
     avatar: '/assets/speakers/omar.png',
     url: 'https://www.linkedin.com/in/omar-u-florez/',
   },
   {
     name: 'Arturo Deza',
-    description: 'NeuroAI: La Ultima Frontera de la Inteligencia Artificial.',
+    description: 'Ponencia: NeuroAI: La Ultima Frontera de la Inteligencia Artificial.',
     avatar: '/assets/speakers/arturo.png',
     url: 'https://www.linkedin.com/in/arturo-deza-9b12324a/',
   },
+]
+
+const PANELISTAS = [
+  {
+    name: 'Solange Reis',
+    description: 'Panel: Mujeres en la ciencia y tecnología',
+    avatar: '/assets/speakers/solange.jpg',
+    url: 'https://www.linkedin.com/in/solange-reis-sol-1b223684/?trk=public_profile_browsemap&originalSubdomain=cl',
+  },
+  {
+    name: 'Felicitas Pila',
+    description: 'Panel: Mujeres en la ciencia y tecnología',
+    avatar: '/assets/speakers/felicitas.jpeg',
+    url: 'https://www.linkedin.com/in/felícitas-pila-9b5678161/',
+  },
+  {
+    name: 'Maribel Coaguila',
+    description: 'Panel: Mujeres en la ciencia y tecnología',
+    avatar: '/assets/speakers/maribel.jpeg',
+    url: '',
+  },
+  {
+    name: 'Anibal Flores',
+    description: 'Panel: ¿Qué tipo de profesionales necesita el Perú para la transformación digital?',
+    avatar: '/assets/speakers/anibal.png',
+    url: 'https://www.linkedin.com/in/anibal-flores-672b3065/',
+  },
+
 ]
 ---
 
@@ -67,6 +95,7 @@ const SPEAKERS = [
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
       {SPEAKERS.map(speak => <Speaker {...speak} />)}
+      {PANELISTAS.map(speak => <Speaker {...speak} />)}
     </div>
   </Wrapper>
 </section>

@@ -75,9 +75,9 @@ const AGENDA1 = [
       avatar: '/assets/speakers/juan.png',
     },
   },
-  { notPont: true, hour: '17:50 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '16:50 pm (PET)', title: 'Preguntas' },
   {
-    hour: '18:00 pm (PET)',
+    hour: '17:00 pm (PET)',
     ubi: 'Auditorio EPISI',
     title: 'Perfiles internacionales de las carreras de Computación según ACM/IEEE-CS Computing Curricula CC2020.',
     description: '',
@@ -87,10 +87,10 @@ const AGENDA1 = [
       avatar: '/assets/speakers/ernesto2.jpg',
     },
   },
-  { notPont: true, hour: '18:30 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '17:30 pm (PET)', title: 'Preguntas' },
   {
     isPanel: true,
-    hour: '18:40 pm (PET)',
+    hour: '17:40 pm (PET)',
     ubi: 'Auditorio EPISI',
     title: '¿Qué tipo de profesionales necesita el Perú para la transformación digital?',
     description:
@@ -117,6 +117,22 @@ const AGENDA1 = [
         job: 'Grupo Souther Copper',
       },
     ],
+    
+  },
+  { notPont: true, hour: '18:10 pm (PET)', title: 'Preguntas' },
+  { notPont: true, title: 'Actividades extra' },
+
+  {
+    hour: '18:25 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title:
+      'Innovación Tecnológica y Emprendimiento en la Industria del Software',
+    description: '',
+    speaker: {
+      name: 'Albert Pino Hurtado',
+      job: 'Full-stack developer y CEO de Innovahora',
+      avatar: '/assets/speakers/pino.jpeg',
+    },
   },
 ]
 const AGENDA2 = [
@@ -203,6 +219,23 @@ const AGENDA2 = [
     },
   },
   { notPont: true, hour: '12:30 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '12:40 pm (PET)',  title: 'Finalizacion del congreso' },
+  { notPont: true, title: 'Actividades extra' },
+
+  {
+    hour: '12:50 pm (PET)',
+    ubi: 'Auditorio EPISI',
+    title: 'Innovación y Emprendimiento en Equipo: Cómo Creamos Herramientas Tecnológicas Valiosas',
+    description: ' ',
+    speaker: {
+      name: 'Diego Quispe',
+      job: 'Full-stack developer',
+      avatar: '/assets/speakers/diego.jpeg',
+    },
+  },
+  
+  { notPont: true, hour: '14:00 a 16:00 hrs',  title: 'Exposición de papers (artículos científicos)' },
+
 ]
 const DAYS = [
   {
@@ -301,7 +334,7 @@ const DAYS = [
             )
           )
         }
-        <Notponencia hour="12:40 pm (PET)" title="Finalizacion del congreso" />
+        
       </div>
     </div>
   </Wrapper>
