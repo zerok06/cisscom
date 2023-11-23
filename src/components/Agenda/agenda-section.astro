@@ -5,9 +5,9 @@ import Ponencia from './ponencia.astro'
 import Panel from './panel.astro'
 
 const AGENDA1 = [
-  { notPont: true, hour: '13:45 pm (PET)', title: 'Charla de Bienvenida' },
+  { notPont: true, hour: '13:45 Hrs', title: 'Charla de Bienvenida' },
   {
-    hour: '14:00 pm (PET)',
+    hour: '14:00 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Hierarchical image segmentation algorithms.',
     description: '',
@@ -17,9 +17,9 @@ const AGENDA1 = [
       avatar: '/assets/speakers/edward.png',
     },
   },
-  { notPont: true, hour: '14:30 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '14:30 Hrs', title: 'Preguntas' },
   {
-    hour: '14:40 pm (PET)',
+    hour: '14:40 Hrs',
     ubi: 'Auditorio EPISI',
     title:
       'La Inteligencia Artificial Generativa, su impacto en el trabajo y las empresas.',
@@ -30,10 +30,10 @@ const AGENDA1 = [
       avatar: '/assets/speakers/jose.png',
     },
   },
-  { notPont: true, hour: '15:10 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '15:10 Hrs', title: 'Preguntas' },
   {
     isPanel: true,
-    hour: '15:20 pm (PET)',
+    hour: '15:20 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Hub de talento en tecnología en el Perú y el mundo',
     description:
@@ -56,10 +56,10 @@ const AGENDA1 = [
       },
     ],
   },
-  { notPont: true, hour: '15:50 pm (PET)', title: 'Preguntas' },
-  { notPont: true, hour: '16:00 pm (PET)', title: 'Break' },
+  { notPont: true, hour: '15:50 Hrs', title: 'Preguntas' },
+  { notPont: true, hour: '16:00 Hrs', title: 'Break' },
   {
-    hour: '16:20 pm (PET)',
+    hour: '16:20 Hrs',
     ubi: 'Auditorio EPISI',
     title:
       'Detección de violencia en video vigilancia usando redes transformers',
@@ -70,9 +70,9 @@ const AGENDA1 = [
       avatar: '/assets/speakers/juan.png',
     },
   },
-  { notPont: true, hour: '16:50 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '16:50 Hrs', title: 'Preguntas' },
   {
-    hour: '17:00 pm (PET)',
+    hour: '17:00 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Perfiles internacionales de las carreras de Computación según ACM/IEEE-CS Computing Curricula CC2020.',
     description: '',
@@ -82,10 +82,10 @@ const AGENDA1 = [
       avatar: '/assets/speakers/ernesto2.jpg',
     },
   },
-  { notPont: true, hour: '17:30 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '17:30 Hrs', title: 'Preguntas' },
   {
     isPanel: true,
-    hour: '17:40 pm (PET)',
+    hour: '17:40 Hrs',
     ubi: 'Auditorio EPISI',
     title: '¿Qué tipo de profesionales necesita el Perú para la transformación digital?',
     description:
@@ -109,11 +109,25 @@ const AGENDA1 = [
     ],
     
   },
-  { notPont: true, hour: '18:10 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '18:10 Hrs', title: 'Preguntas' },
   { notPont: true, title: 'Actividades extra' },
 
   {
-    hour: '18:25 pm (PET)',
+    hour: '18:25 Hrs',
+    ubi: 'Auditorio EPISI',
+    title:
+      'Data Science Research Peru',
+    description: '',
+    speaker: {
+      name: 'Grupo Data Science Research Peru',
+      job: '',
+      avatar: '/assets/sponsor/logoDSRP.png',
+    },
+  },
+
+
+  {
+    hour: '18:35 Hrs',
     ubi: 'Auditorio EPISI',
     title:
       'Innovación Tecnológica y Emprendimiento en la Industria del Software',
@@ -127,7 +141,7 @@ const AGENDA1 = [
 ]
 const AGENDA2 = [
   {
-    hour: '09:00 am (PET)',
+    hour: '09:00 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Adiós Industria 4.0, el por qué nos dirigimos a la Industria 5.0',
     description: '  ',
@@ -137,9 +151,9 @@ const AGENDA2 = [
       avatar: '/assets/speakers/manuel.png',
     },
   },
-  { notPont: true, hour: '09:30 am (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '09:30 Hrs', title: 'Preguntas' },
   {
-    hour: '09:40 pm (PET)',
+    hour: '09:40 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Binarizacion híbrida para el degradado de documentos históricos',
     description: ' ',
@@ -149,10 +163,10 @@ const AGENDA2 = [
       avatar: '/assets/speakers/yessenia.png',
     },
   },
-  { notPont: true, hour: '10:10 pm (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '10:10 Hrs', title: 'Preguntas' },
   {
     isPanel: true,
-    hour: '10:20 am (PET)',
+    hour: '10:20 Hrs',
     ubi: 'Auditorio EPISI',
     title:
       'Mujeres en la ciencia y tecnología.',
@@ -183,10 +197,10 @@ const AGENDA2 = [
       },
     ],
   },
-  { notPont: true, hour: '10:50 am (PET)', title: 'Preguntas' },
-  { notPont: true, hour: '11:00 am (PET)', title: 'Break' },
+  { notPont: true, hour: '10:50 am', title: 'Preguntas' },
+  { notPont: true, hour: '11:00 am', title: 'Break' },
   {
-    hour: '11:20 am (PET)',
+    hour: '11:20 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Como funciona ChatGPT por dentro',
     description: 'Ponencia Virtual.',
@@ -196,9 +210,9 @@ const AGENDA2 = [
       avatar: '/assets/speakers/omar.png',
     },
   },
-  { notPont: true, hour: '11:50 am (PET)', title: 'Preguntas' },
+  { notPont: true, hour: '11:50 am', title: 'Preguntas' },
   {
-    hour: '12:00 pm (PET)',
+    hour: '12:00 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'NeuroAI: La Ultima Frontera de la Inteligencia Artificial.',
     description: ' ',
@@ -208,12 +222,12 @@ const AGENDA2 = [
       avatar: '/assets/speakers/arturo.png',
     },
   },
-  { notPont: true, hour: '12:30 pm (PET)', title: 'Preguntas' },
-  { notPont: true, hour: '12:40 pm (PET)',  title: 'Finalizacion del congreso' },
+  { notPont: true, hour: '12:30 Hrs', title: 'Preguntas' },
+  { notPont: true, hour: '12:40 Hrs',  title: 'Finalizacion del congreso' },
   { notPont: true, title: 'Actividades extra' },
 
   {
-    hour: '12:50 pm (PET)',
+    hour: '12:50 Hrs',
     ubi: 'Auditorio EPISI',
     title: 'Innovación y Emprendimiento en Equipo: Cómo Creamos Herramientas Tecnológicas Valiosas',
     description: ' ',

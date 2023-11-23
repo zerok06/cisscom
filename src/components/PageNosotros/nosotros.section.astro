@@ -1,90 +1,113 @@
 ---
 import Wrapper from '../wrapper.astro'
 import Comision from './nosotros.astro'
+import ComisionWeb from './web.astro'
+import type { HTMLAttributes } from 'astro/types'
 
 const COMISION = [
   {
-    name: 'Ing. Honorio Apaza Alanoca',
-    description:
-      'Edward Cayllahua-Cahuina, investigador en el campo de la Ciencia de la Computación, tiene una maestría en Ciencia de la Computación de la Universidade Federal De Ouro Preto, obtuvo un doctorado conjunto por la Universidad Federal de Minas Gerais en Brasil y la Universidad Gustave-Eiffel en Francia. Sus principales áreas de investigación abarcan la visión computacional, el reconocimiento de patrones, el aprendizaje automático.',
-    avatar: '/assets/Logo_original_blanco.png',
+    name: 'Honorio Apaza',
+    job:'Natural Language Processing Researcher',
+    cargo:'Organizador principal',
+    avatar: '/assets/crew/honorio.jpeg',
     url: 'https://www.linkedin.com/in/edwardcayllahua/',
+    color: 'text-amber-600'
   },
   {
-    name: 'Mgr. Victor Yana Mamani',
-    description:
-      'José Eduardo Ochoa Luna, Doctor en Ciencias de la Computación de la Escola Politecnica da Universidade de São Paulo en Brasil, también cuenta con una maestría en Ciencia de la Computación de la Universidade Federal de Mato Grosso do Sul. Sus áreas de experiencia se centran en el campo de la Ciencia de la Computación, con un enfoque especial en la Inteligencia Artificial. Ha trabajado en temas como Aprendizaje de Máquina, Lógica Probabilística, Redes Bayesianas, Análisis de Redes Sociales, Deep Learning y Procesamiento de Lenguaje Natural.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/jos%C3%A9-eduardo-ochoa-luna-6451b78/',
+    name: 'Allison Reynoso',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Organizadora principal',    
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/allison-reynoso-serra-a1055221a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BR8J1W6FcRDWoGCaBqxEPEA%3D%3D',
+    color: 'text-amber-600'
   },
-  {
-    name: 'Mgr. Hugo Euler Tito Chura',
-    description:
-      'Doctor en Ciencias de la Computación por la Cátedra CONCYTEC de la Universidad Nacional de San Agustín (Perú). Master en Ciencias de la Computación y Matemática Computacional, realizado en el Instituto de Ciencias Matemáticas y de Computación (ICMC) de la Universidad de São Paulo (Brasil). Miembro fundador de la Sociedad Peruana de Computación (SPC) Perú. Actualmente es Docente Investigador en la Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín de Arequipa Desempeñó el cargo de Director de Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín (Arequipa - Perú). Profesor en el Programa Profesional de Ingeniería Informática en la Universidad Católica San Pablo (Arequipa - Perú) Áreas de interés: Deep Learning Redes Complejas Reconocimiento de Patrones, Redes Neuronales, Sistemas dinámicos no lineales, Procesamiento de Imágenes.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/juan-carlos-gutierrez-caceres-b1a58b261/',
-  },
-  {
-    name: 'Mgr. Maribel Cuaguila Mamani',
-    description:
-      ' Doctorado en ciencia de la computación en la Universidad de São Paulo. Es fundador y presidente de la Sociedad de Computación Peruana, y ha ocupado cargos en organizaciones internacionales como el Centro Latinoamericano de Informática (CLEI) y el IEEE. ',
-    avatar: '/assets/Logo_original_blanco.jpg',
-    url: 'https://www.linkedin.com/in/ecuadrosv/?originalSubdomain=pe',
-  },
-  {
-    name: 'Allison Reynoso Serra',
-    description:
-      'Manuel Loaiza Fernandez es un investigador con experiencia en los campos de visualización científica, visualización de modelos 3D, visión por computadora, realidad virtual y aumentada. Tiene un doctorado en Ciencias de la Computación de la PUC-Rio y una maestría en Ciencias de la Computación de la misma universidad. Sus principales contribuciones a la investigación incluyen el desarrollo de un nuevo algoritmo de renderizado acelerado para visualización científica y una nueva técnica para visualización de modelos 3D. ',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/manueleduardoloaizafernandez/',
-  },
-  {
-    name: 'Estrella Velásquez Zúñiga',
-    description:
-      'Yari Ramos Yessenia Deysi realizó sus estudios de Maestría en la Universidade Federal do Rio Grande do Sul, Brasil, obteniendo el grado de Master en Ciencia de la Computación y los de doctorado en la Universidad Nacional de San Agustín de Arequipa. Actualmente trabaja como docente en la Universidad Nacional de San Agustin de Arequipa y en la Universidad San Pablo. Sus areas de interés  son procesamiento de imágenes, visión computacional e inteligencia artificial.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/yessenia-yari-b4778139/',
-  },
-
 ]
 
 const WEB = [
-  {
-    name: 'José Enrique Paye Mamani',
-    description:
-      'Edward Cayllahua-Cahuina, investigador en el campo de la Ciencia de la Computación, tiene una maestría en Ciencia de la Computación de la Universidade Federal De Ouro Preto, obtuvo un doctorado conjunto por la Universidad Federal de Minas Gerais en Brasil y la Universidad Gustave-Eiffel en Francia. Sus principales áreas de investigación abarcan la visión computacional, el reconocimiento de patrones, el aprendizaje automático.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/edwardcayllahua/',
+{
+    name: 'Jamir Edu Balcona',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Web Developer',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/',
+    url2: 'https://github.com/jamviz',
+    color: 'text-green-600'
   },
   {
-    name: 'Mariela Melissa Nina Capujra',
-    description:
-      'José Eduardo Ochoa Luna, Doctor en Ciencias de la Computación de la Escola Politecnica da Universidade de São Paulo en Brasil, también cuenta con una maestría en Ciencia de la Computación de la Universidade Federal de Mato Grosso do Sul. Sus áreas de experiencia se centran en el campo de la Ciencia de la Computación, con un enfoque especial en la Inteligencia Artificial. Ha trabajado en temas como Aprendizaje de Máquina, Lógica Probabilística, Redes Bayesianas, Análisis de Redes Sociales, Deep Learning y Procesamiento de Lenguaje Natural.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/jos%C3%A9-eduardo-ochoa-luna-6451b78/',
+    name: 'José Paye',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Fullstack Developer',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/jose-enrique-paye-mamani-6804ab201/',
+    url2: 'https://github.com/ZeroK06',
+    color: 'text-green-600'
   },
   {
-    name: 'Jamir Eduardo Balcona Viza',
-    description:
-      'Doctor en Ciencias de la Computación por la Cátedra CONCYTEC de la Universidad Nacional de San Agustín (Perú). Master en Ciencias de la Computación y Matemática Computacional, realizado en el Instituto de Ciencias Matemáticas y de Computación (ICMC) de la Universidad de São Paulo (Brasil). Miembro fundador de la Sociedad Peruana de Computación (SPC) Perú. Actualmente es Docente Investigador en la Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín de Arequipa Desempeñó el cargo de Director de Escuela Profesional de Ciencia de la Computación de la Universidad Nacional de San Agustín (Arequipa - Perú). Profesor en el Programa Profesional de Ingeniería Informática en la Universidad Católica San Pablo (Arequipa - Perú) Áreas de interés: Deep Learning Redes Complejas Reconocimiento de Patrones, Redes Neuronales, Sistemas dinámicos no lineales, Procesamiento de Imágenes.',
-    avatar: '/assets/Logo_original_blanco.png',
-    url: 'https://www.linkedin.com/in/juan-carlos-gutierrez-caceres-b1a58b261/',
+    name: 'Mariela Nina',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Web Developer',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/marielanina/',
+    url2: 'https://github.com/MarielaNina',
+    color: 'text-green-600'
   },
-  
 ]
+
+const MAIN = [
+{
+    name: 'Yoselin Arocutipa',
+    job:'Estudiante de la escuela profesional',
+    cargo:'-',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/yoselin-arocutipa-452a84279/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
+    color: 'text-green-600'
+  },
+  {
+    name: 'Estrella Velázquez',
+    job:'Estudiante de la escuela profesional',
+    cargo:'-',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/estrella-velásquez-zuñiga-57b6941aa/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
+    color: 'text-green-600'
+  },
+  {
+    name: 'Seline Maquera',
+    job:'Estudiante de la escuela profesional',
+    cargo:'-',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/seline-maciel-maquera-ortega-63b688280/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
+    color: 'text-green-600'
+  },
+  {
+    name: 'Patricia Guzmán',
+    job:'Estudiante de la escuela profesional',
+    cargo:'-',
+    avatar: '/assets/crew/member.svg',
+    url: '',
+    color: 'text-green-600'
+  },
+]
+
 
 ---
 
 
 <Wrapper>
+
   <h2 class="text-4xl text-center font-bold my-10">Comisión central de VII CISCCOM</h2>
-  <div class="flex flex-col gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
     {COMISION.map((item, index) => <Comision {...item} index={index} />)}
   </div>
 
   <h2 class="text-4xl text-center font-bold my-10">Comisión WEB de VII CISCCOM</h2>
-  <div class="flex flex-col gap-10">
-    {WEB.map((item, index) => <Comision {...item} index={index} />)}
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-12 my-12">
+    {WEB.map((item, index) => <ComisionWeb {...item} index={index} />)}
   </div>
+
+  <h2 class="text-4xl text-center font-bold my-10">Organizadores de otras comisiones de VII CISCCOM</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+    {MAIN.map((item, index) => <Comision {...item} index={index} />)}
+  </div>
+
 </Wrapper>
 
