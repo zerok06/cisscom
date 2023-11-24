@@ -8,15 +8,31 @@ const COMISION = [
   {
     name: 'Honorio Apaza',
     job:'Natural Language Processing Researcher',
-    cargo:'Organizador principal',
+    cargo:'Organizador, Presidente',
     avatar: '/assets/crew/honorio.jpeg',
-    url: 'https://www.linkedin.com/in/edwardcayllahua/',
+    url: 'https://www.linkedin.com/in/honorio-aa/',
+    color: 'text-amber-600'
+  },
+  {
+    name: 'Victor Yana',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Organizador, Director',
+    avatar: '/assets/crew/yanapng.png',
+    url: 'https://www.linkedin.com/in/victor-yana-8ba24697/',
+    color: 'text-amber-600'
+  },
+  {
+    name: 'Estrella Velázquez',
+    job:'Estudiante de la escuela profesional',
+    cargo:'Organizadora Principal',
+    avatar: '/assets/crew/estrellapng.png',
+    url: 'https://www.linkedin.com/in/estrella-velásquez-zuñiga-57b6941aa/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
     color: 'text-amber-600'
   },
   {
     name: 'Allison Reynoso',
     job:'Estudiante de la escuela profesional',
-    cargo:'Organizadora principal',    
+    cargo:'Organizadora Principal',    
     avatar: '/assets/crew/member.svg',
     url: 'https://www.linkedin.com/in/allison-reynoso-serra-a1055221a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BR8J1W6FcRDWoGCaBqxEPEA%3D%3D',
     color: 'text-amber-600'
@@ -28,7 +44,7 @@ const WEB = [
     name: 'Jamir Edu Balcona',
     job:'Estudiante de la escuela profesional',
     cargo:'Web Developer',
-    avatar: '/assets/crew/member.svg',
+    avatar: '/assets/crew/j.png',
     url: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/',
     url2: 'https://github.com/jamviz',
     color: 'text-green-600'
@@ -37,7 +53,7 @@ const WEB = [
     name: 'José Paye',
     job:'Estudiante de la escuela profesional',
     cargo:'Fullstack Developer',
-    avatar: '/assets/crew/member.svg',
+    avatar: '/assets/sponsor/foxtech.png',
     url: 'https://www.linkedin.com/in/jose-enrique-paye-mamani-6804ab201/',
     url2: 'https://github.com/ZeroK06',
     color: 'text-green-600'
@@ -46,7 +62,7 @@ const WEB = [
     name: 'Mariela Nina',
     job:'Estudiante de la escuela profesional',
     cargo:'Web Developer',
-    avatar: '/assets/crew/member.svg',
+    avatar: '/assets/crew/mariela.png',
     url: 'https://www.linkedin.com/in/marielanina/',
     url2: 'https://github.com/MarielaNina',
     color: 'text-green-600'
@@ -57,31 +73,30 @@ const MAIN = [
 {
     name: 'Yoselin Arocutipa',
     job:'Estudiante de la escuela profesional',
-    cargo:'-',
+    cargo:'Moderadora',
     avatar: '/assets/crew/member.svg',
     url: 'https://www.linkedin.com/in/yoselin-arocutipa-452a84279/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
     color: 'text-green-600'
   },
   {
-    name: 'Estrella Velázquez',
-    job:'Estudiante de la escuela profesional',
-    cargo:'-',
-    avatar: '/assets/crew/member.svg',
-    url: 'https://www.linkedin.com/in/estrella-velásquez-zuñiga-57b6941aa/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
-    color: 'text-green-600'
-  },
-  {
     name: 'Seline Maquera',
     job:'Estudiante de la escuela profesional',
-    cargo:'-',
+    cargo:'Organizadora',
     avatar: '/assets/crew/member.svg',
     url: 'https://www.linkedin.com/in/seline-maciel-maquera-ortega-63b688280/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
     color: 'text-green-600'
   },
   {
-    name: 'Patricia Guzmán',
+    name: 'Lucciana Caballero',
     job:'Estudiante de la escuela profesional',
-    cargo:'-',
+    cargo:'Moderadora',
+    avatar: '/assets/crew/member.svg',
+    url: '',
+    color: 'text-green-600'
+  },
+  {
+    name: 'Frank Ruiz',
+    cargo:'Moderador',
     avatar: '/assets/crew/member.svg',
     url: '',
     color: 'text-green-600'
@@ -94,17 +109,17 @@ const MAIN = [
 
 <Wrapper>
 
-  <h2 class="text-4xl text-center font-bold my-10">Comisión central de VII CISCCOM</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Central Committee VII CISCCOM</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
     {COMISION.map((item, index) => <Comision {...item} index={index} />)}
   </div>
 
-  <h2 class="text-4xl text-center font-bold my-10">Comisión WEB de VII CISCCOM</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Software Development Committee</h2>
   <div class="grid grid-cols-1 md:grid-cols-1 gap-12 my-12">
     {WEB.map((item, index) => <ComisionWeb {...item} index={index} />)}
   </div>
 
-  <h2 class="text-4xl text-center font-bold my-10">Organizadores de otras comisiones de VII CISCCOM</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Committees and moderators</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
     {MAIN.map((item, index) => <Comision {...item} index={index} />)}
   </div>
