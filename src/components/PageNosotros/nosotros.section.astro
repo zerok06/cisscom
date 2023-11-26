@@ -2,6 +2,7 @@
 import Wrapper from '../wrapper.astro'
 import Comision from './nosotros.astro'
 import ComisionWeb from './web.astro'
+import Tabla from './tabla.astro'
 import type { HTMLAttributes } from 'astro/types'
 
 const COMISION = [
@@ -17,7 +18,7 @@ const COMISION = [
     name: 'Victor Yana',
     job:'Estudiante de la escuela profesional',
     cargo:'Organizador, Director',
-    avatar: '/assets/crew/yanapng.png',
+    avatar: '/assets/crew/yana.jpg',
     url: 'https://www.linkedin.com/in/victor-yana-8ba24697/',
     color: 'text-amber-600'
   },
@@ -40,28 +41,25 @@ const COMISION = [
 ]
 
 const WEB = [
-{
-    name: 'Jamir Edu Balcona',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Web Developer',
-    avatar: '/assets/crew/j.png',
-    url: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/',
-    url2: 'https://github.com/jamviz',
-    color: 'text-green-600'
-  },
   {
     name: 'José Paye',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Fullstack Developer',
+    job:'Fullstack Developer',
     avatar: '/assets/sponsor/foxtech.png',
     url: 'https://www.linkedin.com/in/jose-enrique-paye-mamani-6804ab201/',
     url2: 'https://github.com/ZeroK06',
     color: 'text-green-600'
   },
   {
+    name: 'Jamir Edu Balcona',
+    job:'Web Developer & Designer',
+    avatar: '/assets/crew/j.png',
+    url: 'https://www.linkedin.com/in/jamir-balcona-viza-80826a218/',
+    url2: 'https://github.com/jamviz',
+    color: 'text-green-600'
+  },
+  {
     name: 'Mariela Nina',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Web Developer',
+    job:'Web Developer & Designer',
     avatar: '/assets/crew/mariela.png',
     url: 'https://www.linkedin.com/in/marielanina/',
     url2: 'https://github.com/MarielaNina',
@@ -69,251 +67,75 @@ const WEB = [
   },
 ]
 
-const MAIN = [
+const CIENCIA = [
 {
-    name: 'Yoselin Arocutipa',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Moderadora',
+    name: 'Dina Elisa León Marín',
+    cargo:'',
+    avatar: '/assets/crew/member.svg',
+    url: 'https://www.linkedin.com/in/dina-leon-marin-9b764b1a7/?originalSubdomain=pe',
+    color: 'text-green-600'
+  },
+{
+    name: 'Yoselin Arocutipa Lovon',
+    cargo:'',
     avatar: '/assets/crew/member.svg',
     url: 'https://www.linkedin.com/in/yoselin-arocutipa-452a84279/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
     color: 'text-green-600'
   },
+]
+
+const LOGISTICA = [
   {
-    name: 'Seline Maquera',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Organizadora',
-    avatar: '/assets/crew/member.svg',
-    url: 'https://www.linkedin.com/in/seline-maciel-maquera-ortega-63b688280/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BdviiW4CZSX2tvC3u3to0kw%3D%3D',
-    color: 'text-green-600'
+    name: 'Seline Maquera Ortega',
+    cargo:'',
+    avatar: '/assets/crew/sel.png',
+    url: 'https://www.linkedin.com/in/seline-maciel-maquera-ortega-63b688280/',
+    color: 'text-teal-500'
   },
   {
+    name: 'Jhormely Sosa Cabe',
+    cargo:'',
+    avatar: '/assets/crew/member.svg',
+    url: '',
+    color: 'text-teal-500'
+  },
+  {
+    name: 'Cristhian Laqui Yucra',
+    cargo:'',
+    avatar: '/assets/crew/member.svg',
+    url: '',
+    color: 'text-teal-500'
+  },
+]
+
+const FINANZAS = [
+{
     name: 'Lucciana Caballero',
-    job:'Estudiante de la escuela profesional',
-    cargo:'Moderadora',
+    cargo:'',
+    avatar: '/assets/crew/lucci.png',
+    url: '',
+    color: 'text-yellow-600'
+  },
+  {
+    name: 'Alexander Morales',
+    cargo:'',
     avatar: '/assets/crew/member.svg',
     url: '',
-    color: 'text-green-600'
+    color: 'text-yellow-600'
   },
   {
-    name: 'Frank Ruiz',
-    cargo:'Moderador',
-    avatar: '/assets/crew/member.svg',
+    name: 'Maribel Cuaguila',
+    cargo:'',
+    avatar: '/assets/speakers/maribel.jpeg',
     url: '',
-    color: 'text-green-600'
-  },
-]
-const COMITE = [
-  {
-    name: 'Alexander Morales Gonzales',
-    job:'Organización',
-    url: '',
-    color: 'text-green-600'
+    color: 'text-yellow-600'
   },
   {
-    name: 'Andre La Rosa',
-    job:'Comisión c/ ponentes',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Andree Sosa Ardiles ⋆',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Anel Belú Visa Condori',
-    job:'Decoración',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Angela Vanessa Paredes Chipana',
-    job:'Decoración',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Angela Vanessa Paredes Chipana',
-    job:'Comisión de decoración',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Angheli Milagros Cruz Flores',
-    job:'Registro de asistencias',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Brayton Chana Gomez',
-    job:'Comisión de asientos ',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Carlos Antonio Flores Mamani ',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Christian Rider Ajrota Anchapuri',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Cristhian Laqui Yucra',
-    job:'Soporte TI',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Daniel Alonso Paitán Vélez ',
-    job:'Comisión de asientos',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Denis German Quispe Arana ',
-    job:'Comisión de asientos',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Diego Galindo Chambi',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Doris Apaza Anahua ',
-    job:'Registro de Asistencias',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Rony Frank Churata Huacani ',
-    job:'Asistencia ',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Sofia Yamilet Quispe Salas ',
-    job:'Publicidad',
-    url: '',
-    color: 'text-green-600'
-  },
-]
-const COMITE2 = [
-  {
-    name: 'Elmer Andres Collanqui Casapia',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Enrique Guillermo Velazquez',
-    job:'Soporte',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Ernesto Montero Rivas',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Estefany Paola Mamani Gutierrez ⋆',
-    job:'Staff ',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Ever Quispe Ramos',
-    job:'Iluminación',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name: 'Angela Vanessa Paredes Chipana',
-    job:'Comisión de decoración',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Gonzalo Juárez Salazar ',
-    job:'Retransmisión',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Gonzalo Koctong Lama ⋆',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Hedilton Nohe Colana Arocutipa ',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Ivan Ccaso Carbajal ⋆',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Marco Nina Cruz',
-    job:'Asistencia',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Michael Manrique',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Oscar Ali Huaco Limache',
-    job:'Comision de asistencia',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Oscar Fernando Paye Cahui',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Oscar Vargas Caldas ⋆',
-    job:'Registro de Asistencias',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Paolo Enmanuel Gordillo Osco ',
-    job:'Comisión de Asistencia ',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Patricia Alexandra Guzmán Alvarez',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
-  },
-  {
-    name:'Elsa Becerra Tupes ⋆',
-    job:'Staff',
-    url: '',
-    color: 'text-green-600'
+    name: 'Alberto Limache Flores',
+    cargo:'',
+    avatar: '/assets/crew/limache.png',
+    url: 'https://www.linkedin.com/in/betho-limache-flores-68145b86/',
+    color: 'text-yellow-600'
   },
 ]
 ---
@@ -321,66 +143,32 @@ const COMITE2 = [
 
 <Wrapper>
 
-  <h2 class="text-4xl text-center font-bold my-10">Central Committee VII CISCCOM</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Comité central VI CISCCOM</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
     {COMISION.map((item, index) => <Comision {...item} index={index} />)}
   </div>
 
-  <h2 class="text-4xl text-center font-bold my-10">Software Development Committee</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Comité de Desarrollo y Comunicaciones</h2>
   <div class="grid grid-cols-1 md:grid-cols-1 gap-12 my-12">
     {WEB.map((item, index) => <ComisionWeb {...item} index={index} />)}
   </div>
 
-  <h2 class="text-4xl text-center font-bold my-10">Committees and moderators</h2>
+  <h2 class="text-4xl text-center font-bold my-10">Comité Científico</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
-    {MAIN.map((item, index) => <Comision {...item} index={index} />)}
+    {CIENCIA.map((item, index) => <Comision {...item} index={index} />)}
   </div>
-  
-  <div class="grid grid-cols-2 gap-8">
-    <div class="border border-gray-300 shadow-sm rounded-lg overflow-hidden max-w-sm">
-      <table class="w-full text-sm leading-5">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="py-3 px-4 text-left font-medium text-gray-600">Colaborador</th>
-            <th class="py-3 px-4 text-left font-medium text-gray-600">Apoyo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {COMITE.map((item, index) => (
-            <tr class={index % 2 === 1 ? 'bg-gray-50 table-row' : 'table-row'}>
-              <td class="py-3 px-4 text-left font-medium text-gray-600">{item.name}</td>
-              <td class="py-3 px-4 text-left">{item.job}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  
-    <div class="border border-gray-300 shadow-sm rounded-lg overflow-hidden max-w-sm">
-      <table class="w-full text-sm leading-5">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="py-3 px-4 text-left font-medium text-gray-600">Colaborador</th>
-            <th class="py-3 px-4 text-left font-medium text-gray-600">Apoyo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {COMITE2.map((item, index) => (
-            <tr class={index % 2 === 1 ? 'bg-gray-50 table-row' : 'table-row'}>
-              <td class="py-3 px-4 text-left font-medium text-gray-600">{item.name}</td>
-              <td class="py-3 px-4 text-left">{item.job}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+
+  <h2 class="text-4xl text-center font-bold my-10">Comité de Logística</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+    {LOGISTICA.map((item, index) => <Comision {...item} index={index} />)}
   </div>
+
+  <h2 class="text-4xl text-center font-bold my-10">Comité de Finanzas</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+    {FINANZAS.map((item, index) => <Comision {...item} index={index} />)}
+  </div>
+
+  <h2 class="text-4xl text-center font-bold my-10">Miembros del Staff y Support</h2>
+  <Tabla/>
 
 </Wrapper>
-
-<style>
-  .table-row:hover {
-    background-color: #E5E7EB;
-    transition: background-color 0.3s ease;
-  }
-</style>

@@ -11,15 +11,15 @@ const { name, job, cargo, avatar, url, url2, color } = Astro.props
     alt=""
     height="197"
     width="197"
-    class="rounded-md h-[100px] w-[100px] sm:h-[197px] sm:w-[197px]"
-  />
+    class="rounded-md h-[100px] w-[100px] sm:h-[197px] sm:w-[197px] transition-all transform duration-500 hover:scale-110"
+    />
   <div>
-    <h1 class="text-neutral-900 text-2xl font-semibold leading-loose">
+    <h1 class="text-neutral-900 text-2xl font-semibold leading-loose transition-opacity duration-500 hover:opacity-50">
       {name}
     </h1>
     <h2 class="text-gray-700 text-base font-medium leading-loose mt-3">
       <span class="text-cyan-600">{job}.</span>{" "}
-       {cargo}{"    "} <br>
+       {"    "} <br>
       <span class={color}>#CISCCOM</span>
     </h2>
     <p class="text-neutral-900 text-sm font-semibold mt-4 font-sans">
